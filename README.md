@@ -171,7 +171,7 @@ Read the [Chinese continuation analysis and next-step decision](results/sft-v2/a
 
 ## Difficulty upgrade: frozen-model transfer test
 
-The existing adapter and base model were evaluated locally on the RTX 5060,
+The existing adapter and base model were evaluated locally,
 with **no new training**. New tasks add three/four-hop queries, deterministic
 retry and canonical-ID recovery, and supplied facts that make queries redundant.
 Both models receive the full tool contract. The base prompt was selected from
@@ -217,7 +217,7 @@ and [reproduction instructions](results/stress-v1/reproduce.md).
 
 ## Previous local LoRA SFT
 
-The RTX 5060 Laptop 8GB completed **300 oracle trajectories / 600 assistant decision targets**, one epoch and **75 optimizer steps**. Peak PyTorch allocation was **2.88 GiB**, with **4.84 GiB reserved**; the optimization loop took 102.58 seconds. The longest actual training sequence was 406 tokens. These measurements apply to this short-context LoRA workload.
+The local LoRA SFT run completed **300 oracle trajectories / 600 assistant decision targets**, one epoch and **75 optimizer steps**. Peak PyTorch allocation was **2.88 GiB**, with **4.84 GiB reserved**; the optimization loop took 102.58 seconds. The longest actual training sequence was 406 tokens. These measurements apply to this short-context LoRA workload.
 
 The new generator uses independent opaque project/employee IDs, disjoint train/dev/test facts, 40 within-train goal-contrast pairs and held-out test paraphrases. Training uses assistant-only loss, BF16 frozen base weights, FP32 q/v LoRA rank 8 and a fixed final checkpoint. A separate eight-step backward/optimizer memory probe was discarded before full training.
 
@@ -236,7 +236,7 @@ Read the [Chinese SFT analysis](results/sft-v1/analysis.zh-CN.md), [audited expe
 
 ## Historical 100-task baseline
 
-The RTX 5060 Laptop completed all 100 development tasks without OOM: **59/100 correct with narrow code-fence normalization; 7/100 correct with strict raw-JSON compliance throughout**.
+The baseline run completed all 100 development tasks without OOM: **59/100 correct with narrow code-fence normalization; 7/100 correct with strict raw-JSON compliance throughout**.
 
 | Family | Correct / tasks | Success |
 |---|---:|---:|

@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-12T06:30:19.117994+00:00",
+  "recorded_at": "2026-10-12T07:01:02.472012+00:00",
   "scope": "All publication files except this inventory, Git internals, caches, virtual environment, base model weights and credentials.",
   "files": {
     ".gitattributes": {
@@ -275,8 +275,8 @@
       "sha256": "9780c902252b00346f50bfbe1d5665161c5bce289366f4da3e27d6c1fb365ccf"
     },
     "README.md": {
-      "bytes": 23926,
-      "sha256": "8978997b469aa52761ef5cbba301a5371cc9288dbcb53ce833c29e92fc6c1c0b"
+      "bytes": 23906,
+      "sha256": "9bf53a4f8373ece1ad455f08fea0f937ab48a8f267f4eb52afa6c155e9e14967"
     },
     "results/calibration9/episodes.jsonl": {
       "bytes": 31786,
