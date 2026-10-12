@@ -1,0 +1,1104 @@
+{
+  "plan": {
+    "purpose": "paired prompt diagnostic, not final generalization test",
+    "prepared_at": "2026-10-11T05:45:28.537244+00:00",
+    "tasks": 60,
+    "tasks_per_family": 20,
+    "repeats_per_task": 3,
+    "total_episodes": 540,
+    "dataset": "data\\prompt_control60.jsonl",
+    "dataset_sha256": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "seeds": [
+      7,
+      10007,
+      20007
+    ],
+    "order": [
+      [
+        "original",
+        "neutral",
+        "balanced_examples"
+      ],
+      [
+        "neutral",
+        "balanced_examples",
+        "original"
+      ],
+      [
+        "balanced_examples",
+        "original",
+        "neutral"
+      ]
+    ],
+    "prompt_sha256": {
+      "original": "5eb327924044d22383f6d5baa9b3a5e15d107b42413c06d8a9bd7a6481f6a190",
+      "neutral": "5183380160a2b953ecbbaab9c9a319edef425a93b1fa107dffe5cd4b7afb6402",
+      "balanced_examples": "8f6aa28762db09c48d35a7a29dbeacb25de51f11f27fa279763f0a36f429dc0e"
+    },
+    "baseline_source_sha256": "d8db100d03c1288523f58e7e8afcdebc87d293b160c89335c4d374b9b85faca7",
+    "environment_source_sha256": "4663440d9c0b465577ba6383efe663e73dc076ede8553cb06a52290c4cddc973",
+    "study_source_sha256": "1fd571a71025bc3e097d1020d64f6eb79e4368c9e1414f38d4a96397c1fb26ae",
+    "fixed": {
+      "model": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "parser": "fenced",
+      "thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "max_context": 1024,
+      "max_new_tokens": 64,
+      "max_calls": 3,
+      "max_turns": 4
+    },
+    "comparisons": [
+      "original vs neutral isolates removal of the specific owner-department plan sentence",
+      "neutral vs balanced_examples adds three complete demonstrations; length and demonstration effects are bundled"
+    ],
+    "metrics": [
+      "success and strict success by family and seed",
+      "correct first lookup",
+      "two-lookup tasks starting lookup",
+      "budget tasks selecting owner",
+      "paired successes gained/lost",
+      "raw JSON validity",
+      "context/truncation failures"
+    ],
+    "interpretation": "Improvement is evidence of prompt sensitivity. Continued failure cannot prove a model capability ceiling. Repeated seeds share tasks; trials are not independent benchmark items."
+  },
+  "conditions": [
+    {
+      "variant": "original",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 38,
+        "strict_successes": 5,
+        "requests": 80,
+        "strict_valid_requests": 22,
+        "strict_valid_request_rate": 0.275,
+        "correct_first_lookup": 20,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 58,
+          "invalid_action": 2
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 3
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 18,
+            "strict_successes": 2
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 5
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 139.4670484000235,
+      "peak_cuda_allocated_mib": 1215.689453125,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 80,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "f06de99a6a277863ec05e04bd9bec9690375e684b7b7982ddfaaad108d745496"
+      }
+    },
+    {
+      "variant": "original",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 38,
+        "strict_successes": 5,
+        "requests": 78,
+        "strict_valid_requests": 20,
+        "strict_valid_request_rate": 0.2564102564102564,
+        "correct_first_lookup": 18,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 4
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 18,
+            "strict_successes": 1
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 5
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 127.04919310001424,
+      "peak_cuda_allocated_mib": 1215.689453125,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 78,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "c3871ebd44cb2eef43b1624b6f3703e123e3ef9b03be2b0216415e3f31b7709e"
+      }
+    },
+    {
+      "variant": "original",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 39,
+        "strict_successes": 3,
+        "requests": 80,
+        "strict_valid_requests": 21,
+        "strict_valid_request_rate": 0.2625,
+        "correct_first_lookup": 20,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 59,
+          "invalid_action": 1
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 1
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 19,
+            "strict_successes": 2
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 6
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 95.17684400000144,
+      "peak_cuda_allocated_mib": 1215.689453125,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 80,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "ae604a7e7de46ee1029b1469966ae0d8f5aee84d599e78d3c56a376656c09229"
+      }
+    },
+    {
+      "variant": "neutral",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 36,
+        "strict_successes": 8,
+        "requests": 76,
+        "strict_valid_requests": 29,
+        "strict_valid_request_rate": 0.3815789473684211,
+        "correct_first_lookup": 16,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 4
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 16,
+            "strict_successes": 4
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 4
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 6
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 131.32663589995354,
+      "peak_cuda_allocated_mib": 1212.02587890625,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 76,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "ce22b295c15837484dec4e49473b13138eca6476edaf12f2808f186498be5428"
+      }
+    },
+    {
+      "variant": "neutral",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 35,
+        "strict_successes": 11,
+        "requests": 75,
+        "strict_valid_requests": 31,
+        "strict_valid_request_rate": 0.41333333333333333,
+        "correct_first_lookup": 15,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 3
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 15,
+            "strict_successes": 8
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 6
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 112.69192429998657,
+      "peak_cuda_allocated_mib": 1212.02587890625,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 75,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "bb6d7f0fe6254f912b04fc82dd226b5af0badeb05d7c0716226cf6123d27e8e9"
+      }
+    },
+    {
+      "variant": "neutral",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 33,
+        "strict_successes": 6,
+        "requests": 73,
+        "strict_valid_requests": 23,
+        "strict_valid_request_rate": 0.3150684931506849,
+        "correct_first_lookup": 13,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 59,
+          "invalid_action": 1
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 2
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 13,
+            "strict_successes": 4
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 5
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 2
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 80.82253689999925,
+      "peak_cuda_allocated_mib": 1212.02587890625,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 73,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "b915ec962476557726adfeb93cf3a681c3fd5919be4ac428528c739cf59baea4"
+      }
+    },
+    {
+      "variant": "balanced_examples",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 40,
+        "strict_successes": 40,
+        "requests": 92,
+        "strict_valid_requests": 92,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 32,
+        "private_episodes": 40,
+        "two_lookup_started": 12,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 147.19325699994806,
+      "peak_cuda_allocated_mib": 1315.78271484375,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 92,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "1b3f64e1bed38d5b1e5d994d18e5735e944605b3baa7c342baa071736faaf74a"
+      }
+    },
+    {
+      "variant": "balanced_examples",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 40,
+        "strict_successes": 40,
+        "requests": 93,
+        "strict_valid_requests": 93,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 33,
+        "private_episodes": 40,
+        "two_lookup_started": 13,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 229.9259837999707,
+      "peak_cuda_allocated_mib": 1315.78271484375,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 93,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "76f26a76472e02ed16100672e944995d775c32b4fd3445841f8aa22fba0b2b53"
+      }
+    },
+    {
+      "variant": "balanced_examples",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 40,
+        "strict_successes": 40,
+        "requests": 93,
+        "strict_valid_requests": 93,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 33,
+        "private_episodes": 40,
+        "two_lookup_started": 13,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "inference_wall_seconds": 125.0147813000367,
+      "peak_cuda_allocated_mib": 1315.78271484375,
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 93,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "8cdf80527b345095558273f5fa8d888f6f3a5fdeb6ffeeb3e85e21625551ffe7"
+      }
+    }
+  ],
+  "aggregate": {
+    "original": {
+      "episodes": 180,
+      "successes": 115,
+      "strict_successes": 13,
+      "requests": 238,
+      "strict_valid_requests": 63,
+      "strict_valid_request_rate": 0.2647058823529412,
+      "correct_first_lookup": 58,
+      "private_episodes": 120,
+      "two_lookup_started": 0,
+      "two_lookup_attempts": 60,
+      "budget_first_lookup_owner": 0,
+      "one_lookup_attempts": 60,
+      "stops": {
+        "answered": 177,
+        "invalid_action": 3
+      },
+      "by_kind": {
+        "direct": {
+          "attempts": 60,
+          "successes": 60,
+          "strict_successes": 8
+        },
+        "one_lookup": {
+          "attempts": 60,
+          "successes": 55,
+          "strict_successes": 5
+        },
+        "two_lookup": {
+          "attempts": 60,
+          "successes": 0,
+          "strict_successes": 0
+        }
+      },
+      "by_template": {
+        "direct:0": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:1": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "one_lookup:0": {
+          "attempts": 21,
+          "successes": 18
+        },
+        "one_lookup:1": {
+          "attempts": 21,
+          "successes": 19
+        },
+        "one_lookup:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "two_lookup:0": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:1": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:2": {
+          "attempts": 18,
+          "successes": 0
+        }
+      }
+    },
+    "neutral": {
+      "episodes": 180,
+      "successes": 104,
+      "strict_successes": 25,
+      "requests": 224,
+      "strict_valid_requests": 83,
+      "strict_valid_request_rate": 0.3705357142857143,
+      "correct_first_lookup": 44,
+      "private_episodes": 120,
+      "two_lookup_started": 0,
+      "two_lookup_attempts": 60,
+      "budget_first_lookup_owner": 0,
+      "one_lookup_attempts": 60,
+      "stops": {
+        "answered": 179,
+        "invalid_action": 1
+      },
+      "by_kind": {
+        "direct": {
+          "attempts": 60,
+          "successes": 60,
+          "strict_successes": 9
+        },
+        "one_lookup": {
+          "attempts": 60,
+          "successes": 44,
+          "strict_successes": 16
+        },
+        "two_lookup": {
+          "attempts": 60,
+          "successes": 0,
+          "strict_successes": 0
+        }
+      },
+      "by_template": {
+        "direct:0": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:1": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "one_lookup:0": {
+          "attempts": 21,
+          "successes": 15
+        },
+        "one_lookup:1": {
+          "attempts": 21,
+          "successes": 11
+        },
+        "one_lookup:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "two_lookup:0": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:1": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:2": {
+          "attempts": 18,
+          "successes": 0
+        }
+      }
+    },
+    "balanced_examples": {
+      "episodes": 180,
+      "successes": 120,
+      "strict_successes": 120,
+      "requests": 278,
+      "strict_valid_requests": 278,
+      "strict_valid_request_rate": 1.0,
+      "correct_first_lookup": 98,
+      "private_episodes": 120,
+      "two_lookup_started": 38,
+      "two_lookup_attempts": 60,
+      "budget_first_lookup_owner": 0,
+      "one_lookup_attempts": 60,
+      "stops": {
+        "answered": 180
+      },
+      "by_kind": {
+        "direct": {
+          "attempts": 60,
+          "successes": 60,
+          "strict_successes": 60
+        },
+        "one_lookup": {
+          "attempts": 60,
+          "successes": 60,
+          "strict_successes": 60
+        },
+        "two_lookup": {
+          "attempts": 60,
+          "successes": 0,
+          "strict_successes": 0
+        }
+      },
+      "by_template": {
+        "direct:0": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:1": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "direct:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "one_lookup:0": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "one_lookup:1": {
+          "attempts": 21,
+          "successes": 21
+        },
+        "one_lookup:2": {
+          "attempts": 18,
+          "successes": 18
+        },
+        "two_lookup:0": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:1": {
+          "attempts": 21,
+          "successes": 0
+        },
+        "two_lookup:2": {
+          "attempts": 18,
+          "successes": 0
+        }
+      }
+    }
+  },
+  "paired": {
+    "original_to_neutral": {
+      "paired_attempts": 180,
+      "both_correct": 102,
+      "gained": 2,
+      "lost": 13,
+      "both_wrong": 63
+    },
+    "neutral_to_balanced_examples": {
+      "paired_attempts": 180,
+      "both_correct": 104,
+      "gained": 16,
+      "lost": 0,
+      "both_wrong": 60
+    },
+    "original_to_balanced_examples": {
+      "paired_attempts": 180,
+      "both_correct": 115,
+      "gained": 5,
+      "lost": 0,
+      "both_wrong": 60
+    }
+  },
+  "unique_tasks": 60,
+  "real_episodes": 540,
+  "verified_requests": 740,
+  "note": "180 attempts per prompt = 60 shared tasks x 3 seeds, not 180 independent tasks; no training performed."
+}

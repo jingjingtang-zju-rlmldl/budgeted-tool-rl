@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-10-12T06:28:33.917574+00:00",
+  "purpose": "Exact historical helper snapshots; paths assume the original workspace. Do not execute these snapshots automatically.",
+  "files_sha256": {
+    "check_prompt_artifact_integrity.py": "65263fd8eafb5007e92efe4b908fad0f156ad09c7a671e5f45667a5969b5775e",
+    "correct_dataset_manifest_hashes.py": "e9979511c46ab9b5ec6539a105f5c9627d7badabaefe2d0bb573a6878fe73f89",
+    "make_sft2_train.py": "5b2cceceaa61ab6ea5e5b1314465e255e863797f9f698760b9bab656b270033a",
+    "make_sft3_modules.py": "5181018144fd8ba041d257d54d26be8c249732f3da49daba14c619846dc5201d",
+    "make_sft4_clones.py": "bbbefc45f919a8281a4404e5209084962e73235c1c39dbf0c858aa312fa98c60",
+    "make_sft4_copy_probe.py": "8b3023fb4f2a344de79ff04b6b04c1c6d12668b681bc68d73e7a5bb2661d8066",
+    "package_toolrl.py": "2c53cdbe5012925ff0da72d71c2038180193c031468d3261c1c2b6a51dbf66d7",
+    "peek_sft2_cohort.py": "6b5477c0b5386db7fe6bdcceb1e034e0f2e089fa6be2e3a10481a7b9deb2698e",
+    "preserve_toolrl_publication.py": "e6b7853336adec52ed35fe4979c919139aa74c63f058fe6a1f6dd3802235b3cd",
+    "prompt_context_preflight.py": "eb7e7ad821cffc8dede5dc9aaa736c40453135d21bc364c6c0e4099e45539067",
+    "prompt_progress.py": "d4ace71ac53cbffd7e528a96236d9d82111e7db73a0a5914ae2e496dead7a3b4",
+    "reconcile_sft2_attempts.py": "a060234777b6f20ecc4c2af27b4605ea02e694250eed1a6239c5655a73e82cba",
+    "restart_sft2.py": "9f6fab2855d010d083128512993a84c480b5f088ef3ab3dbb66a7c2d319a2e1d",
+    "run_sft3_rest.py": "eb372f718add545bb96afa483a01d7135154ac8a0336526c7cf4a82237e20f6d",
+    "run_sft4.py": "cb8499acca313edf38a67d356d263c409f0f366a01c1b2ead76d2c46429c614b",
+    "run_sft4_amended.py": "a9343b50055d0bc54193be65fb16cc29dcd888300ce951a2a4c2bedd26f1dd80",
+    "sft2_dev_inspect.py": "17150b234b037e210057e26e8897ee44390621f0b8ce46d1438f53ae8fbc3513",
+    "sft2_resource_amend.py": "70439fff555e6862671c007bf87446400950173070f44176fc892bbc2f946106",
+    "sft2_test_analysis.py": "a162b5621b4e1fbb2efd91a81232b9ef192e4216711a9c95e1805e6042f5bba5",
+    "sft3_progress.py": "738ed2d5ca738a2b6428e0fbb0d7c7aebc760dd0f950522570f055bcbade0c9d",
+    "sft4_memory_maintenance.py": "68cf5445d255569262ff69582299c12c9bd190634e2105b83f1f137987fd0716",
+    "sft4_progress.py": "5febeb3d8f214054d3fcdd7a3599adac8324a55416fdb71c1d363500baaf6ea2",
+    "update_sft2_readme.py": "69c6fc79abcaee3194ac239ca98ffbbe1eccfc4e429c76ac0fc7eb983fcb3171",
+    "update_sft3_readme.py": "8b423436458b6d58cfa2fcd9ae9286cec5216853efd0e7cd23aa9d52520458a1",
+    "update_sft4_readme.py": "9e6507e05369454dbfd087875aa1eb330aeb857432f42dac976d18ae0ded1f55",
+    "update_stress_readme.py": "cf0c13bd2caa06ec87672399fa5c119baf328c0f410f02dbe69af5a666f8630f"
+  }
+}

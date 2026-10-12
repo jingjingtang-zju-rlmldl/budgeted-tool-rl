@@ -1,0 +1,389 @@
+{
+  "plan": {
+    "purpose": "exploratory follow-up after first inline-example seed, not preregistered primary comparison",
+    "rationale": "Inline examples improved JSON but showed example-answer copying and early termination; test native role-based examples.",
+    "prepared_at": "2026-10-11T05:56:54.920557+00:00",
+    "primary_root": "results\\prompt-control-v1",
+    "primary_plan_sha256": "f3e7ca1f7d895917b1d522fca6166f6f12044a7d44acda7edb72a2aaff2f22ae",
+    "dataset": "data\\prompt_control60.jsonl",
+    "dataset_sha256": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "seeds": [
+      7,
+      10007,
+      20007
+    ],
+    "tasks": 60,
+    "total_episodes": 180,
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "source_sha256": "c9ef5601c69b2e472584e784936eccd9b395bb766b57ff5ca74c99094c5d74f6",
+    "baseline_source_sha256": "d8db100d03c1288523f58e7e8afcdebc87d293b160c89335c4d374b9b85faca7",
+    "environment_source_sha256": "4663440d9c0b465577ba6383efe663e73dc076ede8553cb06a52290c4cddc973",
+    "verifier_source_sha256": "0862ab1d687d36d938e3982f858024de0d4d86e4e84cd4b09a83c184fc3ee1b2",
+    "system_prompt_sha256": "246ee4126b70b19aa5ede2f898cae967f5ff08741c5a7bf0fcf1e21d6c667295",
+    "demonstrations_sha256": "ba86c9025f74bc7c4255a4d35c75a49dd6cb6f4d61f7a851d0a7fc5a7e045d0b",
+    "min_context_tokens": 546,
+    "max_oracle_context_tokens": 736,
+    "comparison_limit": "Changes role representation and example-boundary wording; not a perfect single-factor ablation. Runs after primary conditions; speed comparison can be confounded by desktop load."
+  },
+  "aggregate": {
+    "episodes": 180,
+    "successes": 60,
+    "strict_successes": 60,
+    "requests": 180,
+    "strict_valid_requests": 159,
+    "strict_valid_request_rate": 0.8833333333333333,
+    "correct_first_lookup": 0,
+    "private_episodes": 120,
+    "two_lookup_started": 0,
+    "two_lookup_attempts": 60,
+    "budget_first_lookup_owner": 0,
+    "one_lookup_attempts": 60,
+    "stops": {
+      "answered": 159,
+      "invalid_action": 21
+    },
+    "by_kind": {
+      "direct": {
+        "attempts": 60,
+        "successes": 60,
+        "strict_successes": 60
+      },
+      "one_lookup": {
+        "attempts": 60,
+        "successes": 0,
+        "strict_successes": 0
+      },
+      "two_lookup": {
+        "attempts": 60,
+        "successes": 0,
+        "strict_successes": 0
+      }
+    },
+    "by_template": {
+      "direct:0": {
+        "attempts": 21,
+        "successes": 21
+      },
+      "direct:1": {
+        "attempts": 21,
+        "successes": 21
+      },
+      "direct:2": {
+        "attempts": 18,
+        "successes": 18
+      },
+      "one_lookup:0": {
+        "attempts": 21,
+        "successes": 0
+      },
+      "one_lookup:1": {
+        "attempts": 21,
+        "successes": 0
+      },
+      "one_lookup:2": {
+        "attempts": 18,
+        "successes": 0
+      },
+      "two_lookup:0": {
+        "attempts": 21,
+        "successes": 0
+      },
+      "two_lookup:1": {
+        "attempts": 21,
+        "successes": 0
+      },
+      "two_lookup:2": {
+        "attempts": 18,
+        "successes": 0
+      }
+    }
+  },
+  "conditions": [
+    {
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 20,
+        "strict_successes": 20,
+        "requests": 60,
+        "strict_valid_requests": 53,
+        "strict_valid_request_rate": 0.8833333333333333,
+        "correct_first_lookup": 0,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 53,
+          "invalid_action": 7
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 60,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "0ffdf6aba4dbda6ec4a749e47ab3b9b0957e5f1f12d0a4e718d78c9ec5ca4dc4"
+      },
+      "inference_wall_seconds": 60.8694066000171,
+      "peak_cuda_allocated_mib": 1287.9892578125
+    },
+    {
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 20,
+        "strict_successes": 20,
+        "requests": 60,
+        "strict_valid_requests": 53,
+        "strict_valid_request_rate": 0.8833333333333333,
+        "correct_first_lookup": 0,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 53,
+          "invalid_action": 7
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 60,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "9332bb2db26c2200aa3d54adb04944262787e6831891c1eb5a3e90141e41bcb4"
+      },
+      "inference_wall_seconds": 59.59411619999446,
+      "peak_cuda_allocated_mib": 1287.9892578125
+    },
+    {
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 20,
+        "strict_successes": 20,
+        "requests": 60,
+        "strict_valid_requests": 53,
+        "strict_valid_request_rate": 0.8833333333333333,
+        "correct_first_lookup": 0,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 53,
+          "invalid_action": 7
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        }
+      },
+      "verification": {
+        "tasks_verified": 60,
+        "requests_verified": 60,
+        "tool_replay_matches": true,
+        "answer_regrading_matches": true,
+        "input_token_provenance_matches": true,
+        "output_token_decode_matches": true,
+        "episodes_sha256": "7f6e1713a1a3f8879f7e778ae534988e327d5e8b2c735e82c6c1264aa78b8023"
+      },
+      "inference_wall_seconds": 59.64927640004316,
+      "peak_cuda_allocated_mib": 1287.9892578125
+    }
+  ],
+  "paired": {
+    "original_to_native_examples": {
+      "paired_attempts": 180,
+      "both_correct": 60,
+      "gained": 0,
+      "lost": 55,
+      "both_wrong": 65
+    },
+    "neutral_to_native_examples": {
+      "paired_attempts": 180,
+      "both_correct": 60,
+      "gained": 0,
+      "lost": 44,
+      "both_wrong": 76
+    },
+    "balanced_examples_to_native_examples": {
+      "paired_attempts": 180,
+      "both_correct": 60,
+      "gained": 0,
+      "lost": 60,
+      "both_wrong": 60
+    }
+  },
+  "verified_requests": 180
+}

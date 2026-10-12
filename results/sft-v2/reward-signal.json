@@ -1,0 +1,1035 @@
+{
+  "groups": 32,
+  "rollouts": 128,
+  "counts": {
+    "all_correct_same_cost": 20,
+    "all_failed": 12
+  },
+  "nonconstant_reward_groups": 0,
+  "details": [
+    {
+      "task_id": "sft2_signal_retry_three_0000",
+      "kind": "retry_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        30807,
+        40807,
+        50807,
+        60807
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_three_0001",
+      "kind": "redirect_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        31707,
+        41707,
+        51707,
+        61707
+      ],
+      "calls": [
+        6,
+        6,
+        0,
+        6
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "invalid_action",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_retry_0002",
+      "kind": "prefix_retry",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32607,
+        42607,
+        52607,
+        62607
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_four_0002",
+      "kind": "redirect_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32207,
+        42207,
+        52207,
+        62207
+      ],
+      "calls": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_three_0000",
+      "kind": "redirect_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        31607,
+        41607,
+        51607,
+        61607
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_retry_0000",
+      "kind": "prefix_retry",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32407,
+        42407,
+        52407,
+        62407
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_four_0003",
+      "kind": "chain_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        30707,
+        40707,
+        50707,
+        60707
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "invalid_action"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_redirect_0002",
+      "kind": "prefix_redirect",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        33007,
+        43007,
+        53007,
+        63007
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_four_0003",
+      "kind": "redirect_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        32307,
+        42307,
+        52307,
+        62307
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_four_0001",
+      "kind": "chain_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        30507,
+        40507,
+        50507,
+        60507
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_four_0001",
+      "kind": "retry_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        31307,
+        41307,
+        51307,
+        61307
+      ],
+      "calls": [
+        6,
+        4,
+        6,
+        4
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "invalid_action",
+        "tool_budget_exhausted",
+        "invalid_action"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_four_0000",
+      "kind": "retry_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        31207,
+        41207,
+        51207,
+        61207
+      ],
+      "calls": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_retry_0003",
+      "kind": "prefix_retry",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32707,
+        42707,
+        52707,
+        62707
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_retry_0001",
+      "kind": "prefix_retry",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32507,
+        42507,
+        52507,
+        62507
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_four_0000",
+      "kind": "chain_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        30407,
+        40407,
+        50407,
+        60407
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_four_0001",
+      "kind": "redirect_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        32107,
+        42107,
+        52107,
+        62107
+      ],
+      "calls": [
+        6,
+        6,
+        4,
+        6
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "invalid_action",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_redirect_0000",
+      "kind": "prefix_redirect",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32807,
+        42807,
+        52807,
+        62807
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_three_0000",
+      "kind": "chain_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        30007,
+        40007,
+        50007,
+        60007
+      ],
+      "calls": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "minimum_calls": 3,
+      "rewards": [
+        0.91,
+        0.91,
+        0.91,
+        0.91
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_three_0003",
+      "kind": "retry_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        31107,
+        41107,
+        51107,
+        61107
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_three_0003",
+      "kind": "redirect_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        31907,
+        41907,
+        51907,
+        61907
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_redirect_0003",
+      "kind": "prefix_redirect",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        33107,
+        43107,
+        53107,
+        63107
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_three_0002",
+      "kind": "redirect_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        31807,
+        41807,
+        51807,
+        61807
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_four_0003",
+      "kind": "retry_four",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        31507,
+        41507,
+        51507,
+        61507
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "invalid_action",
+        "invalid_action",
+        "invalid_action",
+        "invalid_action"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_four_0002",
+      "kind": "chain_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        30607,
+        40607,
+        50607,
+        60607
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_redirect_four_0000",
+      "kind": "redirect_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32007,
+        42007,
+        52007,
+        62007
+      ],
+      "calls": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_three_0003",
+      "kind": "chain_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        30307,
+        40307,
+        50307,
+        60307
+      ],
+      "calls": [
+        4,
+        4,
+        6,
+        5
+      ],
+      "minimum_calls": 3,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "invalid_action",
+        "tool_budget_exhausted",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_prefix_redirect_0001",
+      "kind": "prefix_redirect",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        32907,
+        42907,
+        52907,
+        62907
+      ],
+      "calls": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum_calls": 2,
+      "rewards": [
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_three_0001",
+      "kind": "chain_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        30107,
+        40107,
+        50107,
+        60107
+      ],
+      "calls": [
+        6,
+        5,
+        6,
+        4
+      ],
+      "minimum_calls": 3,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "answered",
+        "tool_budget_exhausted",
+        "invalid_action"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_chain_three_0002",
+      "kind": "chain_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        30207,
+        40207,
+        50207,
+        60207
+      ],
+      "calls": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "minimum_calls": 3,
+      "rewards": [
+        0.91,
+        0.91,
+        0.91,
+        0.91
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_three_0002",
+      "kind": "retry_three",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        31007,
+        41007,
+        51007,
+        61007
+      ],
+      "calls": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.88,
+        0.88,
+        0.88,
+        0.88
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_four_0002",
+      "kind": "retry_four",
+      "classification": "all_correct_same_cost",
+      "successes": 4,
+      "seeds": [
+        31407,
+        41407,
+        51407,
+        61407
+      ],
+      "calls": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "minimum_calls": 5,
+      "rewards": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "answered",
+        "answered",
+        "answered",
+        "answered"
+      ]
+    },
+    {
+      "task_id": "sft2_signal_retry_three_0001",
+      "kind": "retry_three",
+      "classification": "all_failed",
+      "successes": 0,
+      "seeds": [
+        30907,
+        40907,
+        50907,
+        60907
+      ],
+      "calls": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "minimum_calls": 4,
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "population_reward_variance": 0.0,
+      "stop_reasons": [
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted",
+        "tool_budget_exhausted"
+      ]
+    }
+  ]
+}

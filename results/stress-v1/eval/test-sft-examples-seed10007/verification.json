@@ -1,0 +1,10 @@
+{
+  "tasks_verified": 64,
+  "requests_verified": 191,
+  "tool_replay_matches": true,
+  "answer_and_cost_regrading_matches": true,
+  "input_token_provenance_matches": true,
+  "output_token_decode_matches": true,
+  "recovery_and_redundancy_accounting_matches": true,
+  "episodes_sha256": "a2821e25ae3dd5ff6347f11c22f6cf51859c61767491da9cd9d96d0b3eb9913c"
+}

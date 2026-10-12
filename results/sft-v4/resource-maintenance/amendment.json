@@ -1,0 +1,17 @@
+{
+  "registered_at": "2026-10-12T05:07:39.836119+00:00",
+  "reason": "Completed first strong-prompt cohort peaked at allocated2355.25MiB/reserved7496MiB on an8151MiB GPU; subsequent inference uses allocator garbage collection to reduce unused-cache pressure.",
+  "allocator": "backend:native,garbage_collection_threshold:0.5",
+  "model_sampling_data_prompts_rewards_unchanged": true,
+  "original_completed_prefix_episodes": 38,
+  "prefix_sha256": "9ead2839404fd44f1ad3d2a918f976b3315a4d53b13e84ad5eb54526c6445ac2",
+  "resumed_cohort": "test-old-examples-seed10017",
+  "interrupted_inflight_episode_restarted": true,
+  "counts": "Only complete recorded episodes and their recorded requests enter replay totals; any unlogged in-flight request is not claimed as an audited episode.",
+  "plan_sha256": "76634598b236117f37c68b83a811dcb260b346e39a463df3715af399690c395c",
+  "completed_prefix_preserved_after_stop": true,
+  "runner_source_sha256": {
+    "run_sft4.py": "cb8499acca313edf38a67d356d263c409f0f366a01c1b2ead76d2c46429c614b",
+    "run_sft4_amended.py": "a9343b50055d0bc54193be65fb16cc29dcd888300ce951a2a4c2bedd26f1dd80"
+  }
+}

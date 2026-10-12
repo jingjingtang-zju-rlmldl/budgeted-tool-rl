@@ -1,0 +1,664 @@
+{
+  "attempts": 128,
+  "independent_facts": 32,
+  "repeated_paired_units": 64,
+  "by_wording": {
+    "0": {
+      "attempts": 64,
+      "successes": 62,
+      "grounded_successes": 62,
+      "strict_successes": 62,
+      "requests": 302,
+      "correct_extra_calls": 0,
+      "optimal_correct": 62,
+      "correct_mean_calls": 3.6451612903225805,
+      "failed_stops": {
+        "tool_budget_exhausted": 2
+      },
+      "failed_without_required_lookup": 0,
+      "failed_after_partial_call_budget": 0,
+      "failed_call_counts": {
+        "6": 2
+      },
+      "observed_error_episodes": 48,
+      "correct_after_error": 48,
+      "necessary_retries": 24,
+      "followed_redirects": 24,
+      "invalid_queries": 12,
+      "unknown_field_errors": 12,
+      "unknown_entity_errors": 0,
+      "project_employee_field_actions": 0,
+      "simulated_tool_requests": 0,
+      "multiple_action_marker_requests": 0,
+      "truncated_requests": 0,
+      "max_input_tokens": 890
+    },
+    "1": {
+      "attempts": 64,
+      "successes": 16,
+      "grounded_successes": 16,
+      "strict_successes": 16,
+      "requests": 342,
+      "correct_extra_calls": 0,
+      "optimal_correct": 16,
+      "correct_mean_calls": 2,
+      "failed_stops": {
+        "answered": 8,
+        "tool_budget_exhausted": 28,
+        "invalid_action": 12
+      },
+      "failed_without_required_lookup": 0,
+      "failed_after_partial_call_budget": 10,
+      "failed_call_counts": {
+        "5": 2,
+        "6": 28,
+        "4": 16,
+        "2": 2
+      },
+      "observed_error_episodes": 16,
+      "correct_after_error": 16,
+      "necessary_retries": 8,
+      "followed_redirects": 8,
+      "invalid_queries": 244,
+      "unknown_field_errors": 137,
+      "unknown_entity_errors": 107,
+      "project_employee_field_actions": 73,
+      "simulated_tool_requests": 0,
+      "multiple_action_marker_requests": 0,
+      "truncated_requests": 0,
+      "max_input_tokens": 879
+    }
+  },
+  "control_only_correct": 46,
+  "variant_only_correct": 0,
+  "both_correct": 16,
+  "both_wrong": 2,
+  "first_project_employee_field": {
+    "0": 0,
+    "1": 45
+  },
+  "paired_units": [
+    {
+      "seed": 17,
+      "pair_id": "sft3_pair_chain_three_0000",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 117,
+      "pair_id": "sft3_pair_chain_three_0001",
+      "kind": "chain_three",
+      "control_success": false,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 217,
+      "pair_id": "sft3_pair_chain_three_0002",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 317,
+      "pair_id": "sft3_pair_chain_three_0003",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 417,
+      "pair_id": "sft3_pair_chain_four_0000",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 517,
+      "pair_id": "sft3_pair_chain_four_0001",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 617,
+      "pair_id": "sft3_pair_chain_four_0002",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 717,
+      "pair_id": "sft3_pair_chain_four_0003",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 817,
+      "pair_id": "sft3_pair_retry_three_0000",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 917,
+      "pair_id": "sft3_pair_retry_three_0001",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1017,
+      "pair_id": "sft3_pair_retry_three_0002",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1117,
+      "pair_id": "sft3_pair_retry_three_0003",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1217,
+      "pair_id": "sft3_pair_retry_four_0000",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1317,
+      "pair_id": "sft3_pair_retry_four_0001",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1417,
+      "pair_id": "sft3_pair_retry_four_0002",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1517,
+      "pair_id": "sft3_pair_retry_four_0003",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1617,
+      "pair_id": "sft3_pair_redirect_three_0000",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1717,
+      "pair_id": "sft3_pair_redirect_three_0001",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1817,
+      "pair_id": "sft3_pair_redirect_three_0002",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 1917,
+      "pair_id": "sft3_pair_redirect_three_0003",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 2017,
+      "pair_id": "sft3_pair_redirect_four_0000",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2117,
+      "pair_id": "sft3_pair_redirect_four_0001",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 2217,
+      "pair_id": "sft3_pair_redirect_four_0002",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 2317,
+      "pair_id": "sft3_pair_redirect_four_0003",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 2417,
+      "pair_id": "sft3_pair_prefix_retry_0000",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2517,
+      "pair_id": "sft3_pair_prefix_retry_0001",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2617,
+      "pair_id": "sft3_pair_prefix_retry_0002",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2717,
+      "pair_id": "sft3_pair_prefix_retry_0003",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2817,
+      "pair_id": "sft3_pair_prefix_redirect_0000",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 2917,
+      "pair_id": "sft3_pair_prefix_redirect_0001",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 3017,
+      "pair_id": "sft3_pair_prefix_redirect_0002",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 3117,
+      "pair_id": "sft3_pair_prefix_redirect_0003",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 10017,
+      "pair_id": "sft3_pair_chain_three_0000",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 10117,
+      "pair_id": "sft3_pair_chain_three_0001",
+      "kind": "chain_three",
+      "control_success": false,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10217,
+      "pair_id": "sft3_pair_chain_three_0002",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10317,
+      "pair_id": "sft3_pair_chain_three_0003",
+      "kind": "chain_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10417,
+      "pair_id": "sft3_pair_chain_four_0000",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10517,
+      "pair_id": "sft3_pair_chain_four_0001",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10617,
+      "pair_id": "sft3_pair_chain_four_0002",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10717,
+      "pair_id": "sft3_pair_chain_four_0003",
+      "kind": "chain_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10817,
+      "pair_id": "sft3_pair_retry_three_0000",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 10917,
+      "pair_id": "sft3_pair_retry_three_0001",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11017,
+      "pair_id": "sft3_pair_retry_three_0002",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11117,
+      "pair_id": "sft3_pair_retry_three_0003",
+      "kind": "retry_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11217,
+      "pair_id": "sft3_pair_retry_four_0000",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11317,
+      "pair_id": "sft3_pair_retry_four_0001",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11417,
+      "pair_id": "sft3_pair_retry_four_0002",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11517,
+      "pair_id": "sft3_pair_retry_four_0003",
+      "kind": "retry_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11617,
+      "pair_id": "sft3_pair_redirect_three_0000",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11717,
+      "pair_id": "sft3_pair_redirect_three_0001",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11817,
+      "pair_id": "sft3_pair_redirect_three_0002",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 11917,
+      "pair_id": "sft3_pair_redirect_three_0003",
+      "kind": "redirect_three",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 12017,
+      "pair_id": "sft3_pair_redirect_four_0000",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12117,
+      "pair_id": "sft3_pair_redirect_four_0001",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 12217,
+      "pair_id": "sft3_pair_redirect_four_0002",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 12317,
+      "pair_id": "sft3_pair_redirect_four_0003",
+      "kind": "redirect_four",
+      "control_success": true,
+      "variant_success": false,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": true
+    },
+    {
+      "seed": 12417,
+      "pair_id": "sft3_pair_prefix_retry_0000",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12517,
+      "pair_id": "sft3_pair_prefix_retry_0001",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12617,
+      "pair_id": "sft3_pair_prefix_retry_0002",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12717,
+      "pair_id": "sft3_pair_prefix_retry_0003",
+      "kind": "prefix_retry",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12817,
+      "pair_id": "sft3_pair_prefix_redirect_0000",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 12917,
+      "pair_id": "sft3_pair_prefix_redirect_0001",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 13017,
+      "pair_id": "sft3_pair_prefix_redirect_0002",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    },
+    {
+      "seed": 13117,
+      "pair_id": "sft3_pair_prefix_redirect_0003",
+      "kind": "prefix_redirect",
+      "control_success": true,
+      "variant_success": true,
+      "control_first_employee_field": false,
+      "variant_first_employee_field": false
+    }
+  ],
+  "analyzed_at": "2026-10-11T14:37:14.394480+00:00",
+  "plan_sha256": "e5f37d79df80a31a5a0de91a9670434cd5e2f5350a5658e0b207f34228aad07b",
+  "episodes_sha256": {
+    "pair-old-protocol-seed17": "a1fc6a1d4c5212f9a696485a8c4d0f98bb2237c1b3acb76634d4d34d5859e381",
+    "pair-old-protocol-seed10017": "e4d5c280fdb6a279e6000009c6de367b9b04821d3b79198142b4628d22c071c8"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "prepared_at": "2026-10-12T04:12:24.784724+00:00",
+  "root": "results\\sft-v4",
+  "data_root": "data\\sft-v4",
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "old_adapter_path": "results\\sft-v3\\training\\adapter",
+  "old_adapter_files_sha256": {
+    "adapter_config.json": "b6e6a645a2b9f844e21d52fbe152440a9a922d9d628b91e366fc60e371d2ed8a",
+    "adapter_model.safetensors": "978026c255400dd0bdaaeeeb8a44fed5bb92e6f5040a913851e7d46911eac820",
+    "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+  },
+  "old_adapter_state_sha256": "f5edb712313c7541b4ec6fe88490dc5bf72590370e2d9fc61b723749e6f0fbe7",
+  "old_training_manifest_path": "results\\sft-v3\\training\\manifest.json",
+  "old_training_manifest_sha256": "32aaae09f40919c95188e8c781aeb8aab9ad597941e0ce6efc66655e6873cbc0",
+  "historical_files_sha256": {
+    "data\\calibration9.jsonl": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+    "data\\dev100.jsonl": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+    "data\\prompt_control60.jsonl": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "data\\sft-v1\\dev.jsonl": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "data\\sft-v1\\test.jsonl": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed",
+    "data\\sft-v1\\train.jsonl": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "data\\sft-v2\\dev.jsonl": "c8e591730ba996a8cc69192c058250e291da1fc94c610ebe48115793210462ed",
+    "data\\sft-v2\\signal.jsonl": "1335db715aa3089c233110c876f67a709db13a67a752cf99377edf0876f466f7",
+    "data\\sft-v2\\test.jsonl": "2d41e4ad79c47154d4388b05131d7394337cbfda856ede085509d1607037cc1a",
+    "data\\sft-v2\\train.jsonl": "c83821e3568f460fed3bbf9f3aed2e1f644025c63ad51a243f886b3402c83eef",
+    "data\\sft-v3\\dev.jsonl": "55c26a03bd25fdd7a121f73828a4190d6dcf98920619688d358eaf8e6a7a99c9",
+    "data\\sft-v3\\pair.jsonl": "58db77abc41cd6e7b2a8e173ff5fcfacf00dd675af76ae6f7ad77f95ea1fd325",
+    "data\\sft-v3\\recovery.jsonl": "9f3a2c312947d12203f6fdeae96a7395b4f3c98f2367132963767ae713f0707d",
+    "data\\sft-v3\\signal.jsonl": "b067d35c617739b414fba2a83066b7ea05256affde5a3a518bca4f7ca63761e2",
+    "data\\sft-v3\\test.jsonl": "5aaa5f5d55b987af5706fe7ed202375913ac3790203280c646c1d16099f49fca",
+    "data\\sft-v3\\train.jsonl": "b3b86e1b130e68bfb1c90eb15474987fd8d995dd988b5089198657c1970f5f05",
+    "data\\stress-v1\\dev.jsonl": "9fad81f5d2b5110443a628e42492bdd055df91404768553664e4911ee0be4c7c",
+    "data\\stress-v1\\test.jsonl": "954c56b5e770bfcc7c708aba0c9b1a16e950c610d88f66e5f5cd0c4440c8c1e3"
+  },
+  "dataset_sha256": {
+    "train": "943021d05e08adc13a30abb55f62f07f14ae438841e45b8813e45ae61b936d02",
+    "collect": "ba981402ca5b6472ca22fb6ad32a162667a9ee7efaefb2792cee588bfeb4ca40",
+    "reserve": "2069e657b10871f8b3a2faf005140ccad1dde93ddbb10dcd5a7e30145b89de3b",
+    "dev": "3ebd4d93315d75ea5e968a3c4756e2ad3619c3a6169e6f7c4abed5b858d40426",
+    "test": "f7981d8a8eb691c9dcb72803ce648f4610b4deb3100ff59425ec9a078cbb8531",
+    "signal": "36d72f3ce3d4fc1d2699f959c0fbd49b49c8423fb8e03fc585fff8ed96427786",
+    "recovery": "fafe74a4dc06f8e29542e5e4502aead6d22f0b55b1152fb110680cedc8db1f42"
+  },
+  "dataset_audit_sha256": "100593e330e05d5cf1ce8722e86a9d96b18575075c5fd5e9c3c65d81536d5e2c",
+  "data_counts": {
+    "train": 240,
+    "collect": 128,
+    "reserve": 128,
+    "dev": 16,
+    "test": 64,
+    "signal": 32,
+    "recovery": 32
+  },
+  "clean_decision_targets": 710,
+  "clean_max_train_tokens": 1136,
+  "prompt_files": {
+    "protocol": "results\\sft-v4\\prompts\\protocol.txt",
+    "examples": "results\\sft-v4\\prompts\\examples.txt"
+  },
+  "prompt_sha256": {
+    "protocol": "1fe65d3f789634a64c98d516a412cb5e349d2174d8d5fabfba1fab6aee5ed20f",
+    "examples": "4174c22a22196ec124c6e61d5ff2118d6c090e825e77eb9ef529253d4540f98e"
+  },
+  "source_sha256": {
+    "sft4_environment.py": "74b3cea9ed074682adf1759b3fbf36ae65a73538164b0eb64658928f7ee0f915",
+    "sft4_prompts.py": "f6a8a131987557793ef4157333318309349b25c83db4643214de342e310e23d1",
+    "sft4_data.py": "27acfab4b541b0a432e4546fa3949d90cc5acfc0e4425edabc8f6cd9a6840423",
+    "sft4_episode.py": "c19099e5fa2f9fae04a41c047dc5ea4e0a4820ecdd216331b8dc03c90b36c53f",
+    "sft4_verify.py": "0263cb495151294e9c318c476044f8891680448c63fc5cdc15a2b0b6ca9c4e19",
+    "sft4_run.py": "867d23dc2eb7196cb57b05b6bebac21e63f2684276e2ee3d443cf09ad4fe7f05",
+    "sft4_train.py": "9557f6b7a96b7a61bc4218c857ef28a02dc18a9b229e03a05a6408b1c209ff8a",
+    "sft4_experiment.py": "885521d779dca54c0665243641b37278b61baf4d0d388619f33a6f5814c6fd79",
+    "sft4_report.py": "ca45728a4f17e0e93418399dd5dfe0b68aeff23fba1be5dce1ded70da9fd7bb7",
+    "environment.py": "4663440d9c0b465577ba6383efe663e73dc076ede8553cb06a52290c4cddc973",
+    "baseline.py": "d8db100d03c1288523f58e7e8afcdebc87d293b160c89335c4d374b9b85faca7",
+    "sft_data.py": "d4f057198514c300436609fa23930c662d01aeffe7fb8f8545bd111691bef9ad"
+  },
+  "training": {
+    "seed": 42,
+    "learning_rate": 0.0001,
+    "gradient_accumulation": 8,
+    "epochs": 1,
+    "max_context": 2048,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "micro_batch": 1,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "loss": "assistant-only per-request mean"
+  },
+  "memory_test": {
+    "optimizer_steps": 8,
+    "probe_discarded": true,
+    "gradient_checkpointing": true,
+    "empty_cache_after_each_update": true,
+    "allocator": "backend:native,garbage_collection_threshold:0.5"
+  },
+  "evaluation_seeds": {
+    "collect": [
+      27,
+      10027
+    ],
+    "reserve": [
+      20027,
+      30027
+    ],
+    "dev": [
+      17
+    ],
+    "test": [
+      17,
+      10017
+    ],
+    "recovery": [
+      17,
+      10017
+    ],
+    "signal": [
+      30017,
+      40017,
+      50017,
+      60017
+    ]
+  },
+  "collection_order": [
+    [
+      "collect",
+      27
+    ],
+    [
+      "reserve",
+      20027
+    ],
+    [
+      "collect",
+      10027
+    ],
+    [
+      "reserve",
+      30027
+    ]
+  ],
+  "collection_rule": "Stop after first cohort yielding >=8 unique eligible natural-copy facts; at most four fixed cohorts. First eligible actual unknown_entity single-edit mistake per fact; unique known-ID repair; legal public-state completion within original 6/7 budget. Sort by cohort order then sampling_index; cap 80 distinct facts. No synthetic prefixes in training.",
+  "clean_training_tasks": 240,
+  "natural_target_facts": 8,
+  "natural_cap": 80,
+  "eval_conditions": [
+    "old/protocol",
+    "old/examples",
+    "new/protocol"
+  ],
+  "eval_fixed": {
+    "max_context": 4096,
+    "max_new_tokens": 96,
+    "max_calls": 6,
+    "max_turns": 7,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "enable_thinking": false,
+    "batch_size": 1,
+    "parser": "fenced"
+  },
+  "reward": {
+    "primary": "grounded_correct * (1 - 0.02 * weighted_query_cost)",
+    "ordinary_query_cost": 1,
+    "resolved_limit_cost": "question-quoted 2 or 6, including errors",
+    "max_possible_cost": 36,
+    "auxiliary": "exact_correct * (1 - 0.03 * call_count)",
+    "changed_from_v3": true
+  },
+  "oracle": "Only supplied facts and actual observations; no hidden-policy peek. Price-2 service dominates unknown-policy routes; price-6 uses observed branch; known prefixes compare remaining cost.",
+  "checkpoint_selection": "fixed final one epoch, no test/signal selection",
+  "signal_policy": "32 fresh fact/wording tasks x four fixed roots, new/protocol only; never train on diagnostic set",
+  "candidate_rl_gate": {
+    "min_nonconstant_groups": 8,
+    "min_distinct_kinds": 3,
+    "meaning": "Predeclared practical screening gate, not a theorem or guarantee; next step still requires new training-task validation and RL memory measurement"
+  },
+  "correction_recovery": "32 scripted single-edit states; edit x chain position x wording fully crossed. Separate from actual natural-copy training sources."
+}

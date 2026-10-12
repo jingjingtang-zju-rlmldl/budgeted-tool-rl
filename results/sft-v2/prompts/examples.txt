@@ -1,0 +1,70 @@
+Answer the current question using the private company database when necessary.
+Emit exactly one JSON object per turn, without explanations or Markdown fences.
+A lookup has exactly these keys: "action":"lookup", "entity":a known entity ID, "field":a field name.
+An answer has exactly these keys: "action":"answer", "value":the exact requested scalar value.
+Available fields by entity type:
+project: budget, owner. The owner is an employee ID.
+employee: department. The department is a department ID.
+department: cost_center. The cost_center is a cost center ID.
+cost_center: spending_limit. The spending_limit is a number.
+Only a requested lookup reveals a private field. Copy entity IDs exactly from the current question or actual tool outputs. Never derive a private value from ID digits.
+Work backwards from the requested field to decide which missing relationships are needed. Follow those relationships with one lookup at a time, then answer from the actual final result. An intermediate employee, department or cost center is not an answer when the question asks for a later field.
+Facts explicitly supplied in the question are valid. Use them to start at the latest known point in the chain; do not re-query already supplied facts. If the final answer is supplied, answer immediately.
+Tool errors consume a call and are not answers. If error is temporary_unavailable and retryable is true, retry the same entity and field. If error is entity_moved, retry the same field on the canonical_entity in that error. Never treat an error, owner ID or example value as the requested final value.
+You have at most 6 lookup calls and 7 output turns, including the final answer. Minimize calls while answering correctly.
+
+Complete illustrative episodes follow. Their entities and values are not facts for the current question.
+Use the current question and actual tool results, never copy an example entity or value.
+
+User: What is the cost center of the department of the owner of project_demo_a?
+Assistant: {"action":"lookup","entity":"project_demo_a","field":"owner"}
+Tool: {"entity":"project_demo_a","field":"owner","value":"employee_demo_a"}
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"entity":"employee_demo_a","field":"department","value":"department_74123"}
+Assistant: {"action":"lookup","entity":"department_74123","field":"cost_center"}
+Tool: {"entity":"department_74123","field":"cost_center","value":"cost_center_demo_a"}
+Assistant: {"action":"answer","value":"cost_center_demo_a"}
+
+User: What spending limit applies to the cost center of the department of the owner of project_demo_a?
+Assistant: {"action":"lookup","entity":"project_demo_a","field":"owner"}
+Tool: {"entity":"project_demo_a","field":"owner","value":"employee_demo_a"}
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"entity":"employee_demo_a","field":"department","value":"department_74123"}
+Assistant: {"action":"lookup","entity":"department_74123","field":"cost_center"}
+Tool: {"entity":"department_74123","field":"cost_center","value":"cost_center_demo_a"}
+Assistant: {"action":"lookup","entity":"cost_center_demo_a","field":"spending_limit"}
+Tool: {"entity":"cost_center_demo_a","field":"spending_limit","value":24761}
+Assistant: {"action":"answer","value":24761}
+
+User: What department does the owner of project_demo_a belong to?
+Assistant: {"action":"lookup","entity":"project_demo_a","field":"owner"}
+Tool: {"entity":"project_demo_a","field":"owner","value":"employee_demo_a"}
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"error":"temporary_unavailable","entity":"employee_demo_a","field":"department","retryable":true}
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"entity":"employee_demo_a","field":"department","value":"department_74123"}
+Assistant: {"action":"answer","value":"department_74123"}
+
+User: What department does the owner of project_demo_b belong to?
+Assistant: {"action":"lookup","entity":"project_demo_b","field":"owner"}
+Tool: {"entity":"project_demo_b","field":"owner","value":"employee_demo_old"}
+Assistant: {"action":"lookup","entity":"employee_demo_old","field":"department"}
+Tool: {"error":"entity_moved","entity":"employee_demo_old","field":"department","canonical_entity":"employee_demo_a"}
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"entity":"employee_demo_a","field":"department","value":"department_74123"}
+Assistant: {"action":"answer","value":"department_74123"}
+
+User: project_demo_a is owned by employee_demo_a. What is the owner's department?
+Assistant: {"action":"lookup","entity":"employee_demo_a","field":"department"}
+Tool: {"entity":"employee_demo_a","field":"department","value":"department_74123"}
+Assistant: {"action":"answer","value":"department_74123"}
+
+User: The owner of project_demo_a belongs to department_74123, whose cost center is cost_center_demo_a. What is the spending limit?
+Assistant: {"action":"lookup","entity":"cost_center_demo_a","field":"spending_limit"}
+Tool: {"entity":"cost_center_demo_a","field":"spending_limit","value":24761}
+Assistant: {"action":"answer","value":24761}
+
+User: The budget of project_demo_a is 321 and its owner is employee_demo_a. Return its budget.
+Assistant: {"action":"answer","value":321}
+
+The examples have ended. Solve the new current user question. Output only its next single JSON action.

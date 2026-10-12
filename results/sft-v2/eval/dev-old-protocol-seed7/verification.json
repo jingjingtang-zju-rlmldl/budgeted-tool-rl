@@ -1,0 +1,11 @@
+{
+  "tasks_verified": 27,
+  "requests_verified": 70,
+  "episodes_sha256": "9e9ad31bddef20a6d20a8c2c19f1eedd6678d493f882d563e96f2b6f60ccd19f",
+  "tool_replay_matches": true,
+  "answer_and_cost_regrading_matches": true,
+  "input_token_provenance_matches": true,
+  "output_token_decode_matches": true,
+  "recovery_accounting_matches": true,
+  "eos_truncation_flags_match": true
+}

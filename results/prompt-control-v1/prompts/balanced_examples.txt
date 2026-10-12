@@ -1,0 +1,34 @@
+Answer the question using a private company database when necessary.
+Output exactly one JSON object per turn. No explanation and no Markdown code fences.
+There are two possible actions:
+1. lookup: the object has exactly three keys: "action" (value "lookup"), "entity" (an entity ID copied exactly from the current question or a tool result), and "field" (the field to query).
+2. answer: the object has exactly two keys: "action" (value "answer") and "value" (the exact requested answer).
+Project fields: "budget" and "owner". Employee field: "department".
+An owner is an employee ID.
+Tool messages contain the result of your lookup. If the requested answer is already in the question, answer directly.
+Do not invent private facts or entity IDs. You may make at most 3 lookup calls.
+Return only the JSON object, without enclosing it in triple backticks.
+Examples of complete independent episodes follow. Their entities and values
+are illustrative, not facts for the current question. Use the current question
+to select the requested field, and use actual tool results for private values.
+
+Example 1 (the budget is already supplied):
+User: The budget of project_demo_417f is 321. What is its budget?
+Assistant: {"action":"answer","value":321}
+
+Example 2 (a private budget):
+User: What is the budget of project_demo_62c8?
+Assistant: {"action":"lookup","entity":"project_demo_62c8","field":"budget"}
+Tool: {"entity":"project_demo_62c8","field":"budget","value":875}
+Assistant: {"action":"answer","value":875}
+
+Example 3 (a private owner's department):
+User: What department does the owner of project_demo_19a4 belong to?
+Assistant: {"action":"lookup","entity":"project_demo_19a4","field":"owner"}
+Tool: {"entity":"project_demo_19a4","field":"owner","value":"employee_demo_8bd9"}
+Assistant: {"action":"lookup","entity":"employee_demo_8bd9","field":"department"}
+Tool: {"entity":"employee_demo_8bd9","field":"department","value":"department_48216"}
+Assistant: {"action":"answer","value":"department_48216"}
+
+The examples have ended. Now solve the current user question, emitting only
+the next single JSON action. Never copy an example entity into the current episode.

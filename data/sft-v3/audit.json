@@ -1,0 +1,130 @@
+{
+  "counts": {
+    "train": 300,
+    "dev": 26,
+    "test": 72,
+    "recovery": 32,
+    "pair": 64,
+    "signal": 32
+  },
+  "train_error_prefix_counts": {
+    "unknown_field": 80,
+    "unknown_entity": 80,
+    "none": 140
+  },
+  "historical_and_cross_split_private_facts_disjoint": true,
+  "pair_only_changes_wording": true,
+  "training_error_prefixes": "scripted counterfactual assistant queries, actually executed; not student-generated rollouts",
+  "seed": 2026101104,
+  "signal_used_for_training": false,
+  "sha256": {
+    "train": "b3b86e1b130e68bfb1c90eb15474987fd8d995dd988b5089198657c1970f5f05",
+    "dev": "55c26a03bd25fdd7a121f73828a4190d6dcf98920619688d358eaf8e6a7a99c9",
+    "test": "5aaa5f5d55b987af5706fe7ed202375913ac3790203280c646c1d16099f49fca",
+    "recovery": "9f3a2c312947d12203f6fdeae96a7395b4f3c98f2367132963767ae713f0707d",
+    "pair": "58db77abc41cd6e7b2a8e173ff5fcfacf00dd675af76ae6f7ad77f95ea1fd325",
+    "signal": "b067d35c617739b414fba2a83066b7ea05256affde5a3a518bca4f7ca63761e2"
+  },
+  "historical_files_sha256": {
+    "data\\calibration9.jsonl": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+    "data\\dev100.jsonl": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+    "data\\prompt_control60.jsonl": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "data\\sft-v1\\dev.jsonl": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "data\\sft-v1\\test.jsonl": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed",
+    "data\\sft-v1\\train.jsonl": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "data\\sft-v2\\dev.jsonl": "c8e591730ba996a8cc69192c058250e291da1fc94c610ebe48115793210462ed",
+    "data\\sft-v2\\signal.jsonl": "1335db715aa3089c233110c876f67a709db13a67a752cf99377edf0876f466f7",
+    "data\\sft-v2\\test.jsonl": "2d41e4ad79c47154d4388b05131d7394337cbfda856ede085509d1607037cc1a",
+    "data\\sft-v2\\train.jsonl": "c83821e3568f460fed3bbf9f3aed2e1f644025c63ad51a243f886b3402c83eef",
+    "data\\stress-v1\\dev.jsonl": "9fad81f5d2b5110443a628e42492bdd055df91404768553664e4911ee0be4c7c",
+    "data\\stress-v1\\test.jsonl": "954c56b5e770bfcc7c708aba0c9b1a16e950c610d88f66e5f5cd0c4440c8c1e3"
+  },
+  "templates": {
+    "train": {
+      "anchor_two": [
+        "Which department employs the employee responsible for {p}?",
+        "Find the department of the person managing {p}."
+      ],
+      "chain_three": [
+        "Trace the ownership chain of {p} to its departmental cost center and identify that center.",
+        "Identify the cost center that services the department of the employee responsible for {p}.",
+        "Which departmental cost center serves the person managing {p}?"
+      ],
+      "chain_four": [
+        "Trace the ownership chain of {p} to the department's cost center and obtain its spending limit.",
+        "Identify the spending limit of the cost center serving the department of the employee responsible for {p}.",
+        "What is the cost-center spending limit for the team of the person managing {p}?"
+      ],
+      "skip_owner": [
+        "The responsible employee for {p} is {e}. Find their department."
+      ],
+      "skip_prefix": [
+        "For {p}, the responsible employee works in {d}, which uses {c}. Retrieve the limit for {c}."
+      ],
+      "given_answer": [
+        "For {p}, the responsible employee is {e} and the budget is {b}. Return the budget."
+      ],
+      "one_lookup": [
+        "Retrieve the budget of {p}."
+      ]
+    },
+    "test": {
+      "anchor_two": [
+        "Report the organizational department of the staff member accountable for {p}.",
+        "Whoever is in charge of {p} works in which department?"
+      ],
+      "chain_three": [
+        "Report the cost center of the organizational department of the staff member accountable for {p}.",
+        "Which cost center belongs to the department of whoever is in charge of {p}?"
+      ],
+      "chain_four": [
+        "Report the spending limit of the cost center of the organizational department of the staff member accountable for {p}.",
+        "What spending ceiling applies to the cost center of the department of whoever is in charge of {p}?"
+      ],
+      "skip_owner": [
+        "The staff member accountable for {p} is {e}. Report the organizational department of this staff member.",
+        "For {p}, the staff member in charge is already identified as {e}. Retrieve the department of {e}."
+      ],
+      "skip_prefix": [
+        "Resolved records for {p}: accountable staff member department {d}; its cost center {c}. Report the spending limit for {c}.",
+        "The department of whoever is in charge of {p} is {d}, assigned to {c}. Read the spending ceiling for {c}."
+      ],
+      "given_answer": [
+        "Recorded budget for {p} is {b}; staff member accountable is {e}. Report the recorded budget.",
+        "The budget is supplied: {p} has {b}. The staff member in charge is {e}. Return the budget."
+      ],
+      "one_lookup": [
+        "Report the financial budget recorded for {p}.",
+        "Read the budget allocation assigned to project {p}."
+      ]
+    },
+    "pair": {
+      "chain_three": [
+        "Trace the ownership chain of {p} to its departmental cost center and identify that center.",
+        "Identify the cost center that services the department of the employee responsible for {p}."
+      ],
+      "chain_four": [
+        "Trace the ownership chain of {p} to the department's cost center and obtain its spending limit.",
+        "Identify the spending limit of the cost center serving the department of the employee responsible for {p}."
+      ],
+      "skip_prefix": [
+        "Context for {p}: owner department {d}, cost center {c}. Obtain the monetary spending limit at {c}.",
+        "Use the resolved chain {p} -> owner -> {d} -> {c}. What spending limit belongs to {c}?"
+      ]
+    },
+    "signal": {
+      "chain_three": [
+        "Which cost center supports the department of the staff member overseeing {p}?",
+        "Find the departmental cost-center record for the individual entrusted with {p}."
+      ],
+      "chain_four": [
+        "What spending limit is associated with the cost center supporting the department of the staff member overseeing {p}?",
+        "Find the spending limit attached to the departmental cost center of the individual entrusted with {p}."
+      ],
+      "skip_prefix": [
+        "For {p}, the overseeing staff member is in {d}, linked to {c}. Read the limit of {c}.",
+        "Resolved for {p}: entrusted individual department {d}; department cost center {c}. Report its spending limit."
+      ]
+    }
+  }
+}

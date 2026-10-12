@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-11T11:16:39.934987+00:00",
+  "partial_attempt": "training-attempt-gc-cache",
+  "discarded_optimizer_steps": 37,
+  "previous_retry_record": "resource-retry-first.json",
+  "previous_discarded_steps": 11,
+  "partial_steps_sha256": "0af8654ff14eed48fe9327b37351e50d78b9b86120abbecddf8710be48083fa6",
+  "reason": "Discarded partial run to enable native allocator unused-cache garbage collection under concurrent GPU load; not OOM or checkpoint selection.",
+  "environment": {
+    "PYTORCH_CUDA_ALLOC_CONF": "backend:native,max_split_size_mb:64,garbage_collection_threshold:0.6"
+  },
+  "training_source_unchanged": true,
+  "all_hyperparameters_unchanged": true,
+  "restarts_from": "results/sft-v1/training/adapter",
+  "checkpoint_selection": "Fixed final one epoch after fresh restart; no partial weights reused.",
+  "documentation": "https://docs.pytorch.org/docs/2.9/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf"
+}

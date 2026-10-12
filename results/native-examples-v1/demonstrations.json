@@ -1,0 +1,50 @@
+[
+  {
+    "role": "user",
+    "content": "The budget of project_demo_417f is 321. What is its budget?"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"answer\",\"value\":321}"
+  },
+  {
+    "role": "user",
+    "content": "What is the budget of project_demo_62c8?"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"lookup\",\"entity\":\"project_demo_62c8\",\"field\":\"budget\"}"
+  },
+  {
+    "role": "tool",
+    "content": "{\"entity\":\"project_demo_62c8\",\"field\":\"budget\",\"value\":875}"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"answer\",\"value\":875}"
+  },
+  {
+    "role": "user",
+    "content": "What department does the owner of project_demo_19a4 belong to?"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"lookup\",\"entity\":\"project_demo_19a4\",\"field\":\"owner\"}"
+  },
+  {
+    "role": "tool",
+    "content": "{\"entity\":\"project_demo_19a4\",\"field\":\"owner\",\"value\":\"employee_demo_8bd9\"}"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"lookup\",\"entity\":\"employee_demo_8bd9\",\"field\":\"department\"}"
+  },
+  {
+    "role": "tool",
+    "content": "{\"entity\":\"employee_demo_8bd9\",\"field\":\"department\",\"value\":\"department_48216\"}"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+  }
+]

@@ -1,0 +1,62 @@
+Find the effective spending limit of the specified project using actual tool results or explicitly supplied facts.
+Emit exactly one JSON object per turn. No prose or Markdown.
+Lookup: {"action":"lookup","entity":"known ID","field":"field name"}.
+Answer: {"action":"answer","value":exact requested number}.
+Fields: project: policy, owner, partner, local_limit, resolved_limit, budget; employee: department; department: cost_center; cost_center: spending_limit; vendor: spending_limit.
+The project policy determines its effective limit. local: project.local_limit. team: project.owner -> employee.department -> department.cost_center -> cost_center.spending_limit. partner: project.partner -> vendor.spending_limit. Read policy before choosing a branch unless policy is supplied.
+Alternative: project.resolved_limit directly returns the correct effective limit for any policy, without needing policy or the owner chain. Its query costs the service price explicitly quoted in the current question (2 or 6). Every other query costs 1. Errors and repeated queries also cost money. Tool outputs disclose query_cost and total_cost.
+Minimize total query cost while answering correctly. If costs tie, prefer fewer calls. Use supplied facts and previous actual results to skip known relationships. A supplied final effective limit needs no query. Do not return an unused branch's value or the project budget.
+Copy the complete entity ID exactly from the current question or actual observations; retain every character. If unknown_entity occurs, recheck the original known ID and correct your copy. There is no automatic ID hint. If unknown_field occurs, consult allowed_fields and the schema; an error is never an answer. Never invent fields from question words.
+At most 6 lookup calls and 7 output turns including the answer. Output only the next single action.
+
+Illustrative episodes; their values and IDs are not current facts.
+User: Effective limit of project_demo_t? Service price 6.
+Assistant: {"action":"lookup","entity":"project_demo_t","field":"policy"}
+Tool: {"entity": "project_demo_t", "field": "policy", "query_cost": 1, "total_cost": 1, "value": "team"}
+Assistant: {"action":"lookup","entity":"project_demo_t","field":"owner"}
+Tool: {"entity": "project_demo_t", "field": "owner", "query_cost": 1, "total_cost": 2, "value": "employee_demo_t"}
+Assistant: {"action":"lookup","entity":"employee_demo_t","field":"department"}
+Tool: {"entity": "employee_demo_t", "field": "department", "query_cost": 1, "total_cost": 3, "value": "department_demo_t"}
+Assistant: {"action":"lookup","entity":"department_demo_t","field":"cost_center"}
+Tool: {"entity": "department_demo_t", "field": "cost_center", "query_cost": 1, "total_cost": 4, "value": "cost_center_demo_t"}
+Assistant: {"action":"lookup","entity":"cost_center_demo_t","field":"spending_limit"}
+Tool: {"entity": "cost_center_demo_t", "field": "spending_limit", "query_cost": 1, "total_cost": 5, "value": 47261}
+Assistant: {"action":"answer","value":47261}
+User: Effective limit of project_demo_t? Service price 2.
+Assistant: {"action":"lookup","entity":"project_demo_t","field":"resolved_limit"}
+Tool: {"entity": "project_demo_t", "field": "resolved_limit", "query_cost": 2, "total_cost": 2, "value": 47261}
+Assistant: {"action":"answer","value":47261}
+User: Effective limit of project_demo_p? Service price 6.
+Assistant: {"action":"lookup","entity":"project_demo_p","field":"policy"}
+Tool: {"entity": "project_demo_p", "field": "policy", "query_cost": 1, "total_cost": 1, "value": "partner"}
+Assistant: {"action":"lookup","entity":"project_demo_p","field":"partner"}
+Tool: {"entity": "project_demo_p", "field": "partner", "query_cost": 1, "total_cost": 2, "value": "vendor_demo_t"}
+Assistant: {"action":"lookup","entity":"vendor_demo_t","field":"spending_limit"}
+Tool: {"entity": "vendor_demo_t", "field": "spending_limit", "query_cost": 1, "total_cost": 3, "value": 68312}
+Assistant: {"action":"answer","value":68312}
+User: Effective limit of project_demo_l? Service price 6.
+Assistant: {"action":"lookup","entity":"project_demo_l","field":"policy"}
+Tool: {"entity": "project_demo_l", "field": "policy", "query_cost": 1, "total_cost": 1, "value": "local"}
+Assistant: {"action":"lookup","entity":"project_demo_l","field":"local_limit"}
+Tool: {"entity": "project_demo_l", "field": "local_limit", "query_cost": 1, "total_cost": 2, "value": 29418}
+Assistant: {"action":"answer","value":29418}
+User: Effective limit of project_demo_t? Policy team, owner employee_demo_t, owner department department_demo_t. Service price 6.
+Assistant: {"action":"lookup","entity":"department_demo_t","field":"cost_center"}
+Tool: {"entity": "department_demo_t", "field": "cost_center", "query_cost": 1, "total_cost": 1, "value": "cost_center_demo_t"}
+Assistant: {"action":"lookup","entity":"cost_center_demo_t","field":"spending_limit"}
+Tool: {"entity": "cost_center_demo_t", "field": "spending_limit", "query_cost": 1, "total_cost": 2, "value": 47261}
+Assistant: {"action":"answer","value":47261}
+User: Effective limit of project_demo_t? Policy local. Service price 2.
+Assistant: {"action":"lookup","entity":"project_demo_t","field":"local_limit"}
+Tool: {"entity": "project_demo_t", "field": "local_limit", "query_cost": 1, "total_cost": 1, "value": 29418}
+Assistant: {"action":"answer","value":29418}
+User: Effective limit of project_demo_t? Supplied effective limit 47261. Service price 6.
+Assistant: {"action":"answer","value":47261}
+User: Effective limit of project_demo_copy? Service price 2.
+Assistant: {"action":"lookup","entity":"project_demo_cop","field":"resolved_limit"}
+Tool: {"entity": "project_demo_cop", "error": "unknown_entity", "field": "resolved_limit", "query_cost": 2, "total_cost": 2}
+Assistant: {"action":"lookup","entity":"project_demo_copy","field":"resolved_limit"}
+Tool: {"entity": "project_demo_copy", "field": "resolved_limit", "query_cost": 2, "total_cost": 4, "value": 83725}
+Assistant: {"action":"answer","value":83725}
+
+Examples end. Solve the current question with only its next single action.

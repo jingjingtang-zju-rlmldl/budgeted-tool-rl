@@ -1,0 +1,20 @@
+{
+  "seed": 707,
+  "task_count": 9,
+  "sha256": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+  "purpose": "development baseline; used to decide subsequent training",
+  "language": "English",
+  "model_visible_fields": [
+    "prompt"
+  ],
+  "hidden_fields": [
+    "database",
+    "expected",
+    "oracle_calls",
+    "kind"
+  ],
+  "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+  "oracle_success": 9,
+  "normalized_lf_sha256": "f231a309cf29f7bf98397457d7a93b343efb10f29f0342740a21a8183d9b366f",
+  "hash_correction": "Corrected Windows newline byte accounting after inference; JSONL bytes unchanged."
+}

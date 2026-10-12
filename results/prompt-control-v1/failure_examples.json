@@ -1,0 +1,816 @@
+{
+  "original": [
+    {
+      "task_id": "p01_862ed1cd68fd",
+      "seed": 7,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_43033",
+      "answer": "Department: Engineering",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "Department: Engineering"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_862ed1cd68fd.",
+      "raw_outputs": [
+        "{\"action\": \"answer\", \"value\": \"Department: Engineering\"}"
+      ]
+    },
+    {
+      "task_id": "p01_3c17f86a584f",
+      "seed": 207,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_12534",
+      "answer": "Department: Engineering",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "Department: Engineering"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_3c17f86a584f.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"Department: Engineering\"\n}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_1ba40973ed9c",
+      "seed": 507,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_28631",
+      "answer": "Department: Engineering",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "Department: Engineering"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_1ba40973ed9c.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"Department: Engineering\"\n}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_50085ef63d34",
+      "seed": 807,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_68148",
+      "answer": "Department: Department of the employee who owns project_p01_50085ef63d34 is not available.",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "Department: Department of the employee who owns project_p01_50085ef63d34 is not available."
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_50085ef63d34.",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"Department: Department of the employee who owns project_p01_50085ef63d34 is not available.\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_972580b9502c",
+      "seed": 1207,
+      "kind": "one_lookup",
+      "template_id": 0,
+      "expected": 3416,
+      "answer": null,
+      "stop_reason": "invalid_action",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_972580b9502c",
+          "field": "budget"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_972580b9502c",
+          "field": "budget",
+          "value": 3416
+        }
+      ],
+      "question": "What is the budget of project_p01_972580b9502c?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"lookup\", \"entity\": \"project_p01_972580b9502c\", \"field\": \"budget\"}\n```",
+        "```json\n{\"action\": \"answer\", \"value\": \"3416\"}"
+      ]
+    },
+    {
+      "task_id": "p01_2ff4cdaf2fd4",
+      "seed": 1507,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_90207",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_2ff4cdaf2fd4.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"department\"\n}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_f554470e7da5",
+      "seed": 1707,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_58479",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_f554470e7da5 belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_7dcc5b2745af",
+      "seed": 2107,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_78466",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_7dcc5b2745af belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_b3b5d2899c93",
+      "seed": 2207,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_70526",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_b3b5d2899c93 belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_91dc54c07a1a",
+      "seed": 2307,
+      "kind": "one_lookup",
+      "template_id": 0,
+      "expected": 6645,
+      "answer": null,
+      "stop_reason": "invalid_action",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_91dc54c07a1a",
+          "field": "budget"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_91dc54c07a1a",
+          "field": "budget",
+          "value": 6645
+        }
+      ],
+      "question": "What is the budget of project_p01_91dc54c07a1a?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"lookup\", \"entity\": \"project_p01_91dc54c07a1a\", \"field\": \"budget\"}\n```",
+        "```json\n{\"action\": \"answer\", \"value\": \"6645\"}"
+      ]
+    },
+    {
+      "task_id": "p01_175ff595d699",
+      "seed": 2607,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_61527",
+      "answer": "Department: Engineering",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "Department: Engineering"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_175ff595d699.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"Department: Engineering\"\n}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_7e7086802a32",
+      "seed": 2907,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_13755",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_7e7086802a32.",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    }
+  ],
+  "neutral": [
+    {
+      "task_id": "p01_862ed1cd68fd",
+      "seed": 7,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_43033",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_862ed1cd68fd.",
+      "raw_outputs": [
+        "{\"action\": \"answer\", \"value\": \"department\"}"
+      ]
+    },
+    {
+      "task_id": "p01_3c17f86a584f",
+      "seed": 207,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_12534",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_3c17f86a584f.",
+      "raw_outputs": [
+        "{\"action\": \"answer\", \"value\": \"department\"}"
+      ]
+    },
+    {
+      "task_id": "p01_1ba40973ed9c",
+      "seed": 507,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_28631",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_1ba40973ed9c.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"department\"\n}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_50085ef63d34",
+      "seed": 807,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_68148",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_50085ef63d34.",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_972580b9502c",
+      "seed": 1207,
+      "kind": "one_lookup",
+      "template_id": 0,
+      "expected": 3416,
+      "answer": "The budget of project_p01_972580b9502c is $500,000.",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "The budget of project_p01_972580b9502c is $500,000."
+        }
+      ],
+      "observations": [],
+      "question": "What is the budget of project_p01_972580b9502c?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"The budget of project_p01_972580b9502c is $500,000.\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_2ff4cdaf2fd4",
+      "seed": 1507,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_90207",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_2ff4cdaf2fd4.",
+      "raw_outputs": [
+        "{\"action\": \"answer\", \"value\": \"department\"}"
+      ]
+    },
+    {
+      "task_id": "p01_f554470e7da5",
+      "seed": 1707,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_58479",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_f554470e7da5 belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_4c273a838c05",
+      "seed": 1807,
+      "kind": "one_lookup",
+      "template_id": 0,
+      "expected": 7878,
+      "answer": "The budget of project_p01_4c273a838c05 is $500,000.",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "The budget of project_p01_4c273a838c05 is $500,000."
+        }
+      ],
+      "observations": [],
+      "question": "What is the budget of project_p01_4c273a838c05?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"The budget of project_p01_4c273a838c05 is $500,000.\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_6387c459a696",
+      "seed": 1907,
+      "kind": "one_lookup",
+      "template_id": 1,
+      "expected": 555,
+      "answer": "The budget recorded for project_p01_6387c459a696 is $150,000.",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "The budget recorded for project_p01_6387c459a696 is $150,000."
+        }
+      ],
+      "observations": [],
+      "question": "Find the budget recorded for project_p01_6387c459a696.",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"The budget recorded for project_p01_6387c459a696 is $150,000.\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_7dcc5b2745af",
+      "seed": 2107,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_78466",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_7dcc5b2745af belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_b3b5d2899c93",
+      "seed": 2207,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_70526",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "What department does the owner of project_p01_b3b5d2899c93 belong to?",
+      "raw_outputs": [
+        "```json\n{\"action\": \"answer\", \"value\": \"department\"}\n```"
+      ]
+    },
+    {
+      "task_id": "p01_175ff595d699",
+      "seed": 2607,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_61527",
+      "answer": "department",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_175ff595d699.",
+      "raw_outputs": [
+        "```json\n{\n  \"action\": \"answer\",\n  \"value\": \"department\"\n}\n```"
+      ]
+    }
+  ],
+  "balanced_examples": [
+    {
+      "task_id": "p01_862ed1cd68fd",
+      "seed": 7,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_43033",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_862ed1cd68fd.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    },
+    {
+      "task_id": "p01_3c17f86a584f",
+      "seed": 207,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_12534",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_3c17f86a584f.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    },
+    {
+      "task_id": "p01_1ba40973ed9c",
+      "seed": 507,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_28631",
+      "answer": "employee_p01_1ba40973ed9c",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_1ba40973ed9c",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "employee_p01_1ba40973ed9c"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_1ba40973ed9c",
+          "field": "owner",
+          "value": "employee_p01_1ba40973ed9c"
+        }
+      ],
+      "question": "Find the department of the employee who owns project_p01_1ba40973ed9c.",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_1ba40973ed9c\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"employee_p01_1ba40973ed9c\"}"
+      ]
+    },
+    {
+      "task_id": "p01_50085ef63d34",
+      "seed": 807,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_68148",
+      "answer": "employee_p01_50085ef63d34",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_50085ef63d34",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "employee_p01_50085ef63d34"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_50085ef63d34",
+          "field": "owner",
+          "value": "employee_p01_50085ef63d34"
+        }
+      ],
+      "question": "Find the department of the employee who owns project_p01_50085ef63d34.",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_50085ef63d34\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"employee_p01_50085ef63d34\"}"
+      ]
+    },
+    {
+      "task_id": "p01_2ff4cdaf2fd4",
+      "seed": 1507,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_90207",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_2ff4cdaf2fd4.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    },
+    {
+      "task_id": "p01_f554470e7da5",
+      "seed": 1707,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_58479",
+      "answer": "employee_p01_f554470e7da5",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_f554470e7da5",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "employee_p01_f554470e7da5"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_f554470e7da5",
+          "field": "owner",
+          "value": "employee_p01_f554470e7da5"
+        }
+      ],
+      "question": "What department does the owner of project_p01_f554470e7da5 belong to?",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_f554470e7da5\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"employee_p01_f554470e7da5\"}"
+      ]
+    },
+    {
+      "task_id": "p01_7dcc5b2745af",
+      "seed": 2107,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_78466",
+      "answer": "department_p01",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_7dcc5b2745af",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "department_p01"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_7dcc5b2745af",
+          "field": "owner",
+          "value": "employee_p01_7dcc5b2745af"
+        }
+      ],
+      "question": "What department does the owner of project_p01_7dcc5b2745af belong to?",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_7dcc5b2745af\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"department_p01\"}"
+      ]
+    },
+    {
+      "task_id": "p01_b3b5d2899c93",
+      "seed": 2207,
+      "kind": "two_lookup",
+      "template_id": 0,
+      "expected": "department_70526",
+      "answer": "department_p01_b3b5d2899c93",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_b3b5d2899c93",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "department_p01_b3b5d2899c93"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_b3b5d2899c93",
+          "field": "owner",
+          "value": "employee_p01_b3b5d2899c93"
+        }
+      ],
+      "question": "What department does the owner of project_p01_b3b5d2899c93 belong to?",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_b3b5d2899c93\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"department_p01_b3b5d2899c93\"}"
+      ]
+    },
+    {
+      "task_id": "p01_175ff595d699",
+      "seed": 2607,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_61527",
+      "answer": "employee_p01_175ff595d699",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "lookup",
+          "entity": "project_p01_175ff595d699",
+          "field": "owner"
+        },
+        {
+          "action": "answer",
+          "value": "employee_p01_175ff595d699"
+        }
+      ],
+      "observations": [
+        {
+          "entity": "project_p01_175ff595d699",
+          "field": "owner",
+          "value": "employee_p01_175ff595d699"
+        }
+      ],
+      "question": "Find the department of the employee who owns project_p01_175ff595d699.",
+      "raw_outputs": [
+        "{\"action\":\"lookup\",\"entity\":\"project_p01_175ff595d699\",\"field\":\"owner\"}",
+        "{\"action\":\"answer\",\"value\":\"employee_p01_175ff595d699\"}"
+      ]
+    },
+    {
+      "task_id": "p01_7e7086802a32",
+      "seed": 2907,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_13755",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_7e7086802a32.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    },
+    {
+      "task_id": "p01_dcc20100f4f8",
+      "seed": 3307,
+      "kind": "two_lookup",
+      "template_id": 1,
+      "expected": "department_68365",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Find the department of the employee who owns project_p01_dcc20100f4f8.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    },
+    {
+      "task_id": "p01_9aedcb854d83",
+      "seed": 3607,
+      "kind": "two_lookup",
+      "template_id": 2,
+      "expected": "department_96566",
+      "answer": "department_48216",
+      "stop_reason": "answered",
+      "actions": [
+        {
+          "action": "answer",
+          "value": "department_48216"
+        }
+      ],
+      "observations": [],
+      "question": "Return the department of the owner recorded for project_p01_9aedcb854d83.",
+      "raw_outputs": [
+        "{\"action\":\"answer\",\"value\":\"department_48216\"}"
+      ]
+    }
+  ]
+}

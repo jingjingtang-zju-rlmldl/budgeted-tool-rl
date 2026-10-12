@@ -1,0 +1,145 @@
+{
+  "split_entities_disjoint": true,
+  "split_private_values_disjoint": true,
+  "historical_disjoint": true,
+  "counts": {
+    "train": {
+      "chain_three": 50,
+      "chain_four": 50,
+      "retry_two": 40,
+      "one_lookup": 20,
+      "given_answer": 40,
+      "redirect_two": 40,
+      "skip_owner": 20,
+      "anchor_two": 20,
+      "skip_prefix": 20
+    },
+    "dev": {
+      "given_answer": 3,
+      "skip_prefix": 3,
+      "skip_owner": 3,
+      "redirect_two": 3,
+      "chain_four": 3,
+      "one_lookup": 3,
+      "chain_three": 3,
+      "retry_two": 3,
+      "anchor_two": 3
+    },
+    "test": {
+      "retry_two": 8,
+      "chain_four": 8,
+      "skip_owner": 8,
+      "chain_three": 8,
+      "redirect_two": 8,
+      "given_answer": 8,
+      "anchor_two": 8,
+      "one_lookup": 8,
+      "skip_prefix": 8
+    },
+    "signal": {
+      "retry_three": 4,
+      "redirect_three": 4,
+      "prefix_retry": 4,
+      "redirect_four": 4,
+      "chain_four": 4,
+      "prefix_redirect": 4,
+      "retry_four": 4,
+      "chain_three": 4
+    }
+  },
+  "fact_groups": {
+    "train": 260,
+    "dev": 27,
+    "test": 72,
+    "signal": 32
+  },
+  "train_goal_contrast_pairs": 40,
+  "signal_used_for_training": false,
+  "template_sets": {
+    "train": "previous dev/test phrasings on new facts",
+    "dev": {
+      "anchor_two": [
+        "Determine which department employs the registered owner of {p}."
+      ],
+      "chain_three": [
+        "Determine the cost center used by the registered owner of {p}, through their department."
+      ],
+      "chain_four": [
+        "Determine the spending limit attached to the department cost center of the registered owner of {p}."
+      ],
+      "skip_owner": [
+        "Ownership has been established: {e} owns {p}. Which department employs {e}?"
+      ],
+      "skip_prefix": [
+        "The department for the owner of {p} is {d}, with cost center {c}. Give the limit assigned to {c}."
+      ],
+      "given_answer": [
+        "Budget entry for {p}: {b}; ownership entry: {e}. Give the budget amount."
+      ],
+      "one_lookup": [
+        "Determine the budget entry stored against {p}."
+      ]
+    },
+    "test": {
+      "anchor_two": [
+        "In which department is the registered owner of {p} employed?",
+        "Resolve the ownership record for {p}, then give the department of that employee."
+      ],
+      "chain_three": [
+        "Name the cost center used by the department employing the registered owner of {p}.",
+        "For {p}, retrieve its owner, their department, and then that department's cost_center value."
+      ],
+      "chain_four": [
+        "Give the monetary spending limit for the cost center used by the department employing the registered owner of {p}.",
+        "Starting with {p}, follow owner, department, and cost_center to retrieve spending_limit."
+      ],
+      "skip_owner": [
+        "Ownership record already supplied: {e} is responsible for {p}. In which department is this employee employed?",
+        "Take {e} as the known owner of {p}; find their department without resolving ownership again."
+      ],
+      "skip_prefix": [
+        "Already resolved for {p}: owner department = {d}, department cost center = {c}. What limit applies to {c}?",
+        "No ownership resolution is needed: {p}'s owner works in {d}, which uses {c}. Obtain the spending limit for {c}."
+      ],
+      "given_answer": [
+        "Budget amount already available for {p}: {b}. The owner is {e}. Give only that budget amount.",
+        "Stored information is supplied here: project {p}, owner {e}, budget {b}. What is the budget value?"
+      ],
+      "one_lookup": [
+        "Give the monetary budget entry held in the database for {p}.",
+        "Read the private budget field belonging to {p} and return its value."
+      ]
+    },
+    "signal": {
+      "chain_three": [
+        "Trace the ownership chain of {p} to its departmental cost center and identify that center.",
+        "Identify the cost center that services the department of the employee responsible for {p}."
+      ],
+      "chain_four": [
+        "Trace the ownership chain of {p} to the department's cost center and obtain its spending limit.",
+        "Identify the spending limit of the cost center serving the department of the employee responsible for {p}."
+      ],
+      "skip_prefix": [
+        "Context for {p}: owner department {d}, cost center {c}. Obtain the monetary spending limit at {c}.",
+        "Use the resolved chain {p} -> owner -> {d} -> {c}. What spending limit belongs to {c}?"
+      ]
+    }
+  },
+  "seed": 2026101103,
+  "sha256": {
+    "train": "c83821e3568f460fed3bbf9f3aed2e1f644025c63ad51a243f886b3402c83eef",
+    "dev": "c8e591730ba996a8cc69192c058250e291da1fc94c610ebe48115793210462ed",
+    "test": "2d41e4ad79c47154d4388b05131d7394337cbfda856ede085509d1607037cc1a",
+    "signal": "1335db715aa3089c233110c876f67a709db13a67a752cf99377edf0876f466f7"
+  },
+  "historical_files_sha256": {
+    "data\\calibration9.jsonl": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+    "data\\dev100.jsonl": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+    "data\\prompt_control60.jsonl": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "data\\sft-v1\\dev.jsonl": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "data\\sft-v1\\test.jsonl": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed",
+    "data\\sft-v1\\train.jsonl": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "data\\stress-v1\\dev.jsonl": "9fad81f5d2b5110443a628e42492bdd055df91404768553664e4911ee0be4c7c",
+    "data\\stress-v1\\test.jsonl": "954c56b5e770bfcc7c708aba0c9b1a16e950c610d88f66e5f5cd0c4440c8c1e3"
+  }
+}

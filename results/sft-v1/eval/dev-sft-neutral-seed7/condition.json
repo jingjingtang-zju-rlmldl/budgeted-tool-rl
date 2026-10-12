@@ -1,0 +1,9 @@
+{
+  "plan_sha256": "af1ba9aa79370d02bdccf2163161f8ada729197a5b1f3a2d3a387115edcc901c",
+  "split": "dev",
+  "model": "sft",
+  "prompt": "neutral",
+  "seed": 7,
+  "adapter_sha256": "d6e235d92f81787835abaff4f604a28ce11a5753d5b850f6e48a12b64be381a3",
+  "source_sha256": "df92b375c46cec45ca0b6dba85f0b2eccc92a50b7ebfca1fb2c7720df44d6d4a"
+}

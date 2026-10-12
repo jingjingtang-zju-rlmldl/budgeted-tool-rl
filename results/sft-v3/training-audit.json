@@ -1,0 +1,16 @@
+{
+  "targets": 1095,
+  "optimizer_steps": 137,
+  "exact_tokens_masks_eos_match": true,
+  "executed_error_prefix_counts": {
+    "unknown_field": 80,
+    "unknown_entity": 80
+  },
+  "bad_queries_are_masked_inputs_not_targets": true,
+  "each_target_used_once": true,
+  "old_initial_and_new_saved_tensor_hashes_match": true,
+  "frozen_base_has_no_gradients": true,
+  "training_manifest_sha256": "32aaae09f40919c95188e8c781aeb8aab9ad597941e0ce6efc66655e6873cbc0",
+  "steps_sha256": "38b414961dae96fdd4ed31510140772e25ec490575815458d5a8984566225e72",
+  "supervision_sha256": "7ed6f109cafac456da34a3f1bc6d8d11df2098a0c096af1f15ba75a7df381276"
+}

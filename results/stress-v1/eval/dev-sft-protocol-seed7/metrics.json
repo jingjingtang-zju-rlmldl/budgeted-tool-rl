@@ -1,0 +1,16 @@
+{
+  "tasks": 24,
+  "successes": 14,
+  "strict_successes": 14,
+  "correct_extra_calls": 0,
+  "by_kind": {
+    "anchor_two": 3,
+    "chain_three": 3,
+    "chain_four": 2,
+    "retry_two": 0,
+    "redirect_two": 0,
+    "skip_owner": 3,
+    "skip_prefix": 0,
+    "given_answer": 3
+  }
+}

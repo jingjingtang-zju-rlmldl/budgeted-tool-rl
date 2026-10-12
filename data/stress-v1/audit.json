@@ -1,0 +1,82 @@
+{
+  "dev_test_entity_overlap": false,
+  "dev_test_value_overlap": false,
+  "historical_entity_overlap": false,
+  "historical_value_overlap": false,
+  "counts": {
+    "dev": {
+      "skip_owner": 3,
+      "anchor_two": 3,
+      "skip_prefix": 3,
+      "chain_four": 3,
+      "chain_three": 3,
+      "retry_two": 3,
+      "redirect_two": 3,
+      "given_answer": 3
+    },
+    "test": {
+      "redirect_two": 8,
+      "skip_prefix": 8,
+      "skip_owner": 8,
+      "given_answer": 8,
+      "chain_three": 8,
+      "chain_four": 8,
+      "retry_two": 8,
+      "anchor_two": 8
+    }
+  },
+  "fact_groups": {
+    "dev": 9,
+    "test": 24
+  },
+  "templates": {
+    "dev": {
+      "anchor_two": "What department does the owner of {p} belong to?",
+      "chain_three": "Find the cost center of the department that the owner of {p} belongs to.",
+      "chain_four": "Find the spending limit of the cost center of the department of the owner of {p}.",
+      "skip_owner": "{p} is owned by {e}. What department does this owner belong to?",
+      "skip_prefix": "The owner of {p} belongs to {d}, whose cost center is {c}. What is that cost center's spending limit?",
+      "given_answer": "The budget of {p} is {b}. Its owner is {e}. What is this project's budget?"
+    },
+    "test": {
+      "anchor_two": [
+        "Using company records, identify the department of the employee who owns {p}.",
+        "Report the department associated with the person listed as the owner of {p}."
+      ],
+      "chain_three": [
+        "Which cost center is linked to the department of the employee listed as the owner of {p}?",
+        "From the records for {p}, follow its owner to that person's department and report the department's cost center."
+      ],
+      "chain_four": [
+        "What spending limit is recorded for the cost center linked to the department of the owner of {p}?",
+        "For {p}, report the spending limit of its owner's department's cost center."
+      ],
+      "skip_owner": [
+        "The supplied ownership entry is {p} -> {e}. Report the department of this employee.",
+        "You already know that {e} owns {p}. Retrieve that employee's department."
+      ],
+      "skip_prefix": [
+        "Known entries: the owner of {p} belongs to {d}; {d} uses {c}. Retrieve the spending limit stored for {c}.",
+        "The project is {p}. Its owner's department is {d} and that department's cost center is {c}. Report the spending limit for this cost center."
+      ],
+      "given_answer": [
+        "Provided entries: {p} has budget {b} and owner {e}. Return the budget.",
+        "For {p}, the budget is already stated as {b}, while the owner is {e}. Answer with this project's budget amount."
+      ]
+    }
+  },
+  "sampling": "Matched fact-group scenarios share task/turn seeds; repeated seed trials and paired scenarios are correlated.",
+  "seed": 2026101102,
+  "sha256": {
+    "dev": "9fad81f5d2b5110443a628e42492bdd055df91404768553664e4911ee0be4c7c",
+    "test": "954c56b5e770bfcc7c708aba0c9b1a16e950c610d88f66e5f5cd0c4440c8c1e3"
+  },
+  "historical_files_sha256": {
+    "data\\calibration9.jsonl": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+    "data\\dev100.jsonl": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+    "data\\prompt_control60.jsonl": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+    "data\\sft-v1\\dev.jsonl": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "data\\sft-v1\\test.jsonl": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed",
+    "data\\sft-v1\\train.jsonl": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a"
+  }
+}

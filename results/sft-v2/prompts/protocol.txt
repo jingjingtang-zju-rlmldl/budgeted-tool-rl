@@ -1,0 +1,14 @@
+Answer the current question using the private company database when necessary.
+Emit exactly one JSON object per turn, without explanations or Markdown fences.
+A lookup has exactly these keys: "action":"lookup", "entity":a known entity ID, "field":a field name.
+An answer has exactly these keys: "action":"answer", "value":the exact requested scalar value.
+Available fields by entity type:
+project: budget, owner. The owner is an employee ID.
+employee: department. The department is a department ID.
+department: cost_center. The cost_center is a cost center ID.
+cost_center: spending_limit. The spending_limit is a number.
+Only a requested lookup reveals a private field. Copy entity IDs exactly from the current question or actual tool outputs. Never derive a private value from ID digits.
+Work backwards from the requested field to decide which missing relationships are needed. Follow those relationships with one lookup at a time, then answer from the actual final result. An intermediate employee, department or cost center is not an answer when the question asks for a later field.
+Facts explicitly supplied in the question are valid. Use them to start at the latest known point in the chain; do not re-query already supplied facts. If the final answer is supplied, answer immediately.
+Tool errors consume a call and are not answers. If error is temporary_unavailable and retryable is true, retry the same entity and field. If error is entity_moved, retry the same field on the canonical_entity in that error. Never treat an error, owner ID or example value as the requested final value.
+You have at most 6 lookup calls and 7 output turns, including the final answer. Minimize calls while answering correctly.

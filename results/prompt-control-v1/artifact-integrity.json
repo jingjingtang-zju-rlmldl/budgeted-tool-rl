@@ -1,0 +1,32 @@
+{
+  "sealed_runs": [
+    "results/native-examples-v1/native_examples-seed10007",
+    "results/native-examples-v1/native_examples-seed20007",
+    "results/native-examples-v1/native_examples-seed7",
+    "results/prompt-control-v1/balanced_examples-seed10007",
+    "results/prompt-control-v1/balanced_examples-seed20007",
+    "results/prompt-control-v1/balanced_examples-seed7",
+    "results/prompt-control-v1/neutral-seed10007",
+    "results/prompt-control-v1/neutral-seed20007",
+    "results/prompt-control-v1/neutral-seed7",
+    "results/prompt-control-v1/original-seed10007",
+    "results/prompt-control-v1/original-seed20007",
+    "results/prompt-control-v1/original-seed7"
+  ],
+  "verified_episodes": 720,
+  "verified_requests": 920,
+  "plan_and_source_hashes_match": true,
+  "trace_hashes_match": true,
+  "git_filter_preserves_pinned_bytes": [
+    "toolrl/baseline.py",
+    "toolrl/environment.py",
+    "toolrl/prompt_study.py",
+    "toolrl/chat_prompt_probe.py",
+    "toolrl/verify_run.py",
+    "data/prompt_control60.jsonl",
+    "results/prompt-control-v1/plan.json",
+    "results/prompt-control-v1/original-seed7/episodes.jsonl"
+  ],
+  "dataset_files_unchanged": true,
+  "training_performed": false
+}

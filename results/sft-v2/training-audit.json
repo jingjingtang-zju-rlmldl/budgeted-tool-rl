@@ -1,0 +1,25 @@
+{
+  "supervision_matches_rebuilt_oracle": true,
+  "assistant_only_masks_and_eos_match": true,
+  "unique_decision_targets": 990,
+  "trajectories": 300,
+  "optimizer_steps": 124,
+  "one_epoch_exact_coverage": true,
+  "continuation_initial_weights_match": true,
+  "adapter_changed": true,
+  "base_has_no_gradients": true,
+  "saved_lora_tensors_match_post_training_state": true,
+  "training_steps_sha256": "8935aade7baddc5caa9ba64810753d72e076cfeaae53f597ffa29fbb1ea8f566",
+  "supervision_sha256": "946946d95e9b0b0072ceb333083dc13da2d2ed73a95d03f09dd75601fd7c55c2",
+  "adapter_files_sha256": {
+    "adapter_config.json": "b19230764b7a1cd3441ff0521b2f2cc797c6abfccfaa7b7962482a3e16f21d17",
+    "adapter_model.safetensors": "c0ed86b12d228c8d01d7edc0a4430faf323f985af462797f4eea0b5d295de402",
+    "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+  },
+  "supervised_error_types": {
+    "temporary_unavailable": 40,
+    "entity_moved": 40
+  },
+  "recovery_next_state_targets": 80,
+  "training_manifest_sha256": "b653da94facca809e4fcb4333ad2e708bad9b965a5feb231370026a5548bddf5"
+}

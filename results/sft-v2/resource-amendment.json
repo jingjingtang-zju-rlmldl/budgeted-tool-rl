@@ -1,0 +1,27 @@
+{
+  "amended_at": "2026-10-11T11:22:50.092874+00:00",
+  "original_plan_sha256": "fea8014557691d27b97ae3c0d076defe477a2255bd2285ad14e23654564f5794",
+  "reason": "Memory-only trigger expanded before any evaluation: WDDM paging can severely slow training without CUDA OOM.",
+  "changed_fields": [
+    "memory_test.fallback",
+    "memory_test.final_gradient_checkpointing",
+    "memory_test.resource_amendment_path"
+  ],
+  "frozen_sources_unchanged": true,
+  "data_prompts_seeds_hyperparameters_unchanged": true,
+  "checkpoint_selection_unchanged": true,
+  "no_test_or_signal_output_exists": true,
+  "final_environment": {
+    "PYTORCH_CUDA_ALLOC_CONF": "backend:native,garbage_collection_threshold:0.5"
+  },
+  "final_training_flag": "--checkpointing",
+  "additional_discarded_attempt": "training-attempt-split-cache",
+  "additional_discarded_optimizer_steps": 2,
+  "additional_steps_sha256": "1fbdfb253262d3a63ddd4a6b4bafa286215fba69b7978ddd4fb28ac040fa7101",
+  "peak_reserved_mib": 15756.0,
+  "retries_before_this": [
+    "resource-retry-first.json",
+    "resource-retry.json"
+  ],
+  "all_partial_weights_discarded": true
+}

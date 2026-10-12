@@ -1,0 +1,49 @@
+{
+  "status": "aborted_resource_contention",
+  "mode": "train",
+  "started_at": "2026-10-11T10:59:34.844424+00:00",
+  "plan_sha256": "fea8014557691d27b97ae3c0d076defe477a2255bd2285ad14e23654564f5794",
+  "config": {
+    "seed": 42,
+    "learning_rate": 0.0001,
+    "gradient_accumulation": 8,
+    "epochs": 1,
+    "max_context": 1024,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "micro_batch": 1,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "loss": "assistant-only per-request mean"
+  },
+  "gradient_checkpointing": false,
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "train_sha256": "c83821e3568f460fed3bbf9f3aed2e1f644025c63ad51a243f886b3402c83eef",
+  "dev_sha256": "c8e591730ba996a8cc69192c058250e291da1fc94c610ebe48115793210462ed",
+  "python": "3.13.5",
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.3",
+  "peft": "0.17.1",
+  "accelerate": "1.10.1",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "cuda": "12.8",
+  "source_sha256": "38b3986bbf266709ec2d5a29670713d38358ebe7355399cf9498bdbfee2af098",
+  "training_performed": false,
+  "continuation": true,
+  "old_adapter_files_sha256": {
+    "adapter_config.json": "b19230764b7a1cd3441ff0521b2f2cc797c6abfccfaa7b7962482a3e16f21d17",
+    "adapter_model.safetensors": "d6e235d92f81787835abaff4f604a28ce11a5753d5b850f6e48a12b64be381a3",
+    "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+  },
+  "aborted_at": "2026-10-11T11:08:22.257460+00:00",
+  "reason": "Discarded partial run to enable native allocator unused-cache garbage collection under concurrent GPU load; not OOM or checkpoint selection.",
+  "completed_logged_optimizer_steps": 11,
+  "adapter_saved": false
+}

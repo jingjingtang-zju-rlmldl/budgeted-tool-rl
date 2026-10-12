@@ -1,0 +1,23 @@
+{
+  "training_manifest_sha256": "31e6ef528276cb4754bfe17900416fec340ef269950082cf10904a0939f7d436",
+  "training_steps_sha256": "05d6d69ec1b3a43cf828288a82ab8bdf2a1082701cca8c65deffd340508f8807",
+  "supervision_sha256": "7c8d839de085add2eb08fcfd44d120866fb84927deda0d75ba1f270a7dac5cb9",
+  "adapter_files_sha256": {
+    "adapter_config.json": "b19230764b7a1cd3441ff0521b2f2cc797c6abfccfaa7b7962482a3e16f21d17",
+    "adapter_model.safetensors": "d6e235d92f81787835abaff4f604a28ce11a5753d5b850f6e48a12b64be381a3",
+    "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+  },
+  "rebuilt_masked_requests": 600,
+  "unique_training_episodes": 300,
+  "optimizer_steps": 75,
+  "second_lookup_states": 100,
+  "split_overlap_absent": true,
+  "all_training_targets_seen_once": true,
+  "training_and_smoke_same_initial_adapter": true,
+  "training_did_not_reuse_smoke_adapter": true,
+  "saved_adapter_state_hash_matches": true,
+  "saved_adapter_parameters": 1146880,
+  "saved_adapter_dtype": "float32",
+  "only_lora_tensors_saved": true,
+  "limitation": "Base tensors were frozen and excluded from optimizer; replay verifies recorded token/tool provenance, not a rerun of model generation."
+}

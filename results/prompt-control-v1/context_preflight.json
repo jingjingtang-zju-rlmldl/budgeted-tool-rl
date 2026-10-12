@@ -1,0 +1,14 @@
+{
+  "original": {
+    "min_tokens": 247,
+    "max_oracle_context_tokens": 437
+  },
+  "neutral": {
+    "min_tokens": 224,
+    "max_oracle_context_tokens": 414
+  },
+  "balanced_examples": {
+    "min_tokens": 562,
+    "max_oracle_context_tokens": 752
+  }
+}

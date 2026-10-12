@@ -1,0 +1,55 @@
+{
+  "selected_at": "2026-10-11T07:56:38.096284+00:00",
+  "plan_sha256": "f714948e464c56dddfbad18fb33a05a8f41abcfe6a4fff22eee5514d367d1939",
+  "selected_prompt": "examples",
+  "candidates": [
+    {
+      "prompt": "protocol",
+      "tasks": 24,
+      "successes": 5,
+      "strict_successes": 0,
+      "correct_extra_calls": 5,
+      "by_kind": {
+        "anchor_two": 0,
+        "chain_three": 0,
+        "chain_four": 0,
+        "retry_two": 0,
+        "redirect_two": 0,
+        "skip_owner": 1,
+        "skip_prefix": 1,
+        "given_answer": 3
+      },
+      "prompt_characters": 1715
+    },
+    {
+      "prompt": "examples",
+      "tasks": 24,
+      "successes": 10,
+      "strict_successes": 10,
+      "correct_extra_calls": 0,
+      "by_kind": {
+        "anchor_two": 0,
+        "chain_three": 1,
+        "chain_four": 0,
+        "retry_two": 0,
+        "redirect_two": 0,
+        "skip_owner": 3,
+        "skip_prefix": 3,
+        "given_answer": 3
+      },
+      "prompt_characters": 5465
+    }
+  ],
+  "dev_provenance": {
+    "protocol": {
+      "episodes_sha256": "c3d2a81150ab6fb156f3dd9ad7e0ccfa8a9b313513e7bccae9b9d35eb1220c01",
+      "verification_sha256": "45d8305aeb0ee8d5c32512f4d38ad0eb019f607bca9fa1602a0fcbdeb8cc7aa1"
+    },
+    "examples": {
+      "episodes_sha256": "1ff121018f4db2ef0b559e8f5472ab3ec9c74d6fa428ac4d7281fc85cc7ca977",
+      "verification_sha256": "8ac0c809b573f366e86f61f21d627677a0716a90ac80fafbc1f3cf213452b702"
+    }
+  },
+  "rule": "dev exact successes, then strict successes, then fewer correct extra calls, then shorter prompt; test is never used",
+  "test_used": false
+}

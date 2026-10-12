@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "budgeted-tool-rl"
+version = "0.1.0"
+description = "A controlled lookup environment, prompt controls and measured small-model LoRA SFT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+inference = ["torch>=2.6", "transformers>=4.51,<5", "huggingface_hub>=0.30"]
+training = ["torch==2.9.1", "transformers==4.57.3", "huggingface_hub==0.36.2", "peft==0.17.1", "accelerate==1.10.1"]
+reporting = ["matplotlib==3.10.0"]
+
+[tool.setuptools.packages.find]
+include = ["toolrl*"]

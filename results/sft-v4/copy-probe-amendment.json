@@ -1,0 +1,25 @@
+{
+  "registered_at": "2026-10-12T04:37:32.447984+00:00",
+  "original_plan_sha256": "76634598b236117f37c68b83a811dcb260b346e39a463df3715af399690c395c",
+  "source_sha256": {
+    "sft4_copy_rules.py": "da52842818d5ffe0aa6830c8f74b5a8d4b3b7f85794c8a6685f4db022c25ea26",
+    "sft4_copy_probe.py": "89c49609c9f3730f65f26f9713268f4a69d29b693820f929a8d3f36b5c373485"
+  },
+  "data_sha256": "e4e4dc731aac33fd20557f7daba287bffe2a023bd6c369da5333a3dc1b4f0a43",
+  "task_count": 128,
+  "seeds": [
+    40027,
+    50027
+  ],
+  "temperature": 1.2,
+  "top_p": 0.95,
+  "top_k": 20,
+  "model": "original v3 adapter, unchanged",
+  "reason": "Original training collection has no eligible actual single-character copy failure so far; conditional mining rule registered before baseline evaluation.",
+  "condition": "Enable only if all four original training collector cohorts complete with zero eligible copy facts.",
+  "stop": "At least eight distinct eligible actual single-edit copy facts or both fixed probe roots complete; no artificial corruption.",
+  "distribution": "Training-only hinted field and higher sampling entropy; not a deployment error-frequency estimate.",
+  "unaffected": "Original sources/plan/data/prompts/baseline and final signal sampling remain frozen; no test/signal-based tuning.",
+  "exact_question_source": "Reserved training facts only; field hint from original public-state planner; no answer value or hidden policy hint.",
+  "selection": "Original unique-known-ID single-edit eligibility, budget check, one selected prefix per fact, total cap80 unchanged."
+}

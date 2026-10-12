@@ -1,0 +1,68 @@
+{
+  "entity_overlap": false,
+  "private_value_overlap": false,
+  "owner_suffix_relation": false,
+  "held_out_test_templates": true,
+  "counts": {
+    "train": {
+      "two_lookup": 100,
+      "one_lookup": 100,
+      "direct": 100
+    },
+    "dev": {
+      "direct": 10,
+      "two_lookup": 10,
+      "one_lookup": 10
+    },
+    "test": {
+      "two_lookup": 20,
+      "direct": 20,
+      "one_lookup": 20
+    }
+  },
+  "seed": 2026101201,
+  "sha256": {
+    "train": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "dev": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "test": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed"
+  },
+  "training_goal_contrast_pairs": 40,
+  "train_templates": {
+    "direct": [
+      "The budget of {project} is {budget}. What is its budget?",
+      "Given: {project} has a budget of {budget}. Return the budget of {project}.",
+      "For {project}, the budget is already provided: {budget}. What is that value?",
+      "The company record shown here gives {project} a budget of {budget}. Return that budget."
+    ],
+    "one_lookup": [
+      "What is the budget of {project}?",
+      "Find the budget recorded for {project}.",
+      "Return the budget of {project} from the private database.",
+      "Look up the budget amount assigned to {project}."
+    ],
+    "two_lookup": [
+      "What department does the owner of {project} belong to?",
+      "Find the department of the employee who owns {project}.",
+      "Return the department of the owner recorded for {project}.",
+      "Which department does the employee listed as the owner of {project} work in?"
+    ]
+  },
+  "test_templates": {
+    "direct": [
+      "For reference, the allocation for {project} is {budget}. Give its budget as a number.",
+      "The supplied budget entry for {project} reads {budget}. Report this value.",
+      "{project} has {budget} as its stated budget. Answer with that amount."
+    ],
+    "one_lookup": [
+      "Please retrieve the stored budget amount for {project}.",
+      "Using the company records, report the budget for {project}.",
+      "What number is saved in the budget field of {project}?"
+    ],
+    "two_lookup": [
+      "Which department is associated with the employee listed as the owner of {project}?",
+      "Identify the owner of {project} and report that person's department.",
+      "From company records, give the department of the person marked as the owner of {project}."
+    ]
+  },
+  "limitation": "Synthetic English schema and two-hop compositions only; test holds out paraphrases, not new tools."
+}

@@ -1,0 +1,9 @@
+{
+  "plan_sha256": "af1ba9aa79370d02bdccf2163161f8ada729197a5b1f3a2d3a387115edcc901c",
+  "split": "dev",
+  "model": "base",
+  "prompt": "neutral",
+  "seed": 7,
+  "adapter_sha256": null,
+  "source_sha256": "df92b375c46cec45ca0b6dba85f0b2eccc92a50b7ebfca1fb2c7720df44d6d4a"
+}

@@ -1,0 +1,141 @@
+{
+  "analyzed_at": "2026-10-12T06:07:48.298289+00:00",
+  "plan_sha256": "76634598b236117f37c68b83a811dcb260b346e39a463df3715af399690c395c",
+  "aggregate": {
+    "dev": {
+      "old/protocol": {
+        "attempts": 16,
+        "exact_correct": 2,
+        "grounded_correct": 2,
+        "strict_grounded_correct": 2,
+        "requests": 19,
+        "optimal_weighted_correct": 2,
+        "successful_total_cost": 0,
+        "successful_cost_regret": 0,
+        "correct_mean_cost": 0,
+        "mean_reward": 0.125,
+        "actual_unknown_entity": 0,
+        "actual_unknown_field": 0,
+        "failed_stops": {
+          "answered": 10,
+          "invalid_action": 4
+        },
+        "ungrounded_exact_answers": 0,
+        "max_input_tokens": 515
+      },
+      "old/examples": {
+        "attempts": 16,
+        "exact_correct": 16,
+        "grounded_correct": 16,
+        "strict_grounded_correct": 16,
+        "requests": 42,
+        "optimal_weighted_correct": 7,
+        "successful_total_cost": 60,
+        "successful_cost_regret": 24,
+        "correct_mean_cost": 3.75,
+        "mean_reward": 0.925,
+        "actual_unknown_entity": 0,
+        "actual_unknown_field": 0,
+        "failed_stops": {},
+        "ungrounded_exact_answers": 0,
+        "max_input_tokens": 2282
+      }
+    },
+    "test": {
+      "old/protocol": {
+        "attempts": 128,
+        "exact_correct": 38,
+        "grounded_correct": 37,
+        "strict_grounded_correct": 37,
+        "requests": 164,
+        "optimal_weighted_correct": 22,
+        "successful_total_cost": 102,
+        "successful_cost_regret": 36,
+        "correct_mean_cost": 2.7567567567567566,
+        "mean_reward": 0.273125,
+        "actual_unknown_entity": 5,
+        "actual_unknown_field": 0,
+        "failed_stops": {
+          "answered": 88,
+          "invalid_action": 2,
+          "tool_budget_exhausted": 1
+        },
+        "ungrounded_exact_answers": 1,
+        "max_input_tokens": 943
+      },
+      "old/examples": {
+        "attempts": 128,
+        "exact_correct": 128,
+        "grounded_correct": 128,
+        "strict_grounded_correct": 128,
+        "requests": 315,
+        "optimal_weighted_correct": 43,
+        "successful_total_cost": 506,
+        "successful_cost_regret": 218,
+        "correct_mean_cost": 3.953125,
+        "mean_reward": 0.9209375,
+        "actual_unknown_entity": 0,
+        "actual_unknown_field": 0,
+        "failed_stops": {},
+        "ungrounded_exact_answers": 0,
+        "max_input_tokens": 2412
+      }
+    },
+    "recovery": {
+      "old/protocol": {
+        "attempts": 64,
+        "exact_correct": 10,
+        "grounded_correct": 10,
+        "strict_grounded_correct": 10,
+        "requests": 208,
+        "optimal_weighted_correct": 9,
+        "successful_total_cost": 63,
+        "successful_cost_regret": 3,
+        "correct_mean_cost": 6.3,
+        "mean_reward": 0.1365625,
+        "actual_unknown_entity": 107,
+        "actual_unknown_field": 2,
+        "failed_stops": {
+          "answered": 19,
+          "tool_budget_exhausted": 18,
+          "invalid_action": 17
+        },
+        "ungrounded_exact_answers": 0,
+        "max_input_tokens": 1241
+      },
+      "old/examples": {
+        "attempts": 64,
+        "exact_correct": 17,
+        "grounded_correct": 17,
+        "strict_grounded_correct": 17,
+        "requests": 228,
+        "optimal_weighted_correct": 17,
+        "successful_total_cost": 102,
+        "successful_cost_regret": 0,
+        "correct_mean_cost": 6,
+        "mean_reward": 0.23375,
+        "actual_unknown_entity": 101,
+        "actual_unknown_field": 12,
+        "failed_stops": {
+          "answered": 26,
+          "tool_budget_exhausted": 20,
+          "invalid_action": 1
+        },
+        "ungrounded_exact_answers": 0,
+        "max_input_tokens": 2449
+      }
+    }
+  },
+  "episodes_sha256": {
+    "dev-old-protocol-seed17": "36709af798cead36c800460f0c17e40138a2fcc549ef181bc64c87003c9f1486",
+    "dev-old-examples-seed17": "89d9d8088e329692c6b65c1f2020aa97e5c8aae2604a271008aa3d52982449b2",
+    "test-old-protocol-seed17": "bb1b5ced22cb58c299aaa4b8f2ed7a002b35cf8ac18e748231af968fd50dea06",
+    "test-old-examples-seed17": "32bf39d2696434416a35933cb6a9b606da5eced2fe0b87021a0a5ca713644b99",
+    "test-old-protocol-seed10017": "738c9945253283b74bc128c9163f210bf6afa3f4a0beb2de441323b326cc5767",
+    "test-old-examples-seed10017": "e191855114cded4e2f58c47a5ce27244e07ee03eeed51149276f1621121977ae",
+    "recovery-old-protocol-seed17": "91fdd42b743720c2d2051fa2179f1c0543312d1c6facd5610ab1661bbe3c8e53",
+    "recovery-old-examples-seed17": "c6ef0dcbe14baca99c24def75bf1c9909fe67911aec162d27ba6a7ee11d6c692",
+    "recovery-old-protocol-seed10017": "e74863c2210082c00cbacfb974a3dcdda9e000871b93dbca51bbabdee248a523",
+    "recovery-old-examples-seed10017": "1ffe769927a671647581db4a9fad2dad8b98a33ea88df6c18da93bb3da43b30d"
+  }
+}

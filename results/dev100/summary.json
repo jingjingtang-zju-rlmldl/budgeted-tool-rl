@@ -1,0 +1,201 @@
+{
+  "overall": {
+    "tasks": 100,
+    "successes": 59,
+    "success_rate": 0.59,
+    "strict_successes": 7,
+    "strict_success_rate": 0.07,
+    "requests": 139,
+    "strict_valid_requests": 39,
+    "fence_normalized_requests": 98,
+    "descriptive_wilson_95": [
+      0.4920143005341078,
+      0.6813268697886348
+    ],
+    "mean_calls": 0.39,
+    "mean_minimum_calls": 0.99,
+    "correct_mean_calls": 0.423728813559322,
+    "correct_extra_calls": 0.0,
+    "generated_tokens": 3197,
+    "generation_seconds": 225.60209300060524,
+    "generation_tokens_per_second": 14.170967819839435,
+    "mean_task_wall_seconds": 2.262486971000326,
+    "median_task_wall_seconds": 1.4582530000188854,
+    "repeated_calls": 0,
+    "invalid_tool_calls": 1,
+    "stop_reasons": {
+      "answered": 98,
+      "invalid_action": 2
+    },
+    "failed_answered": 39,
+    "direct_unnecessary_lookup_tasks": 0,
+    "failure_classes": {
+      "answer_without_required_lookup": 33,
+      "invalid_action": 2,
+      "invalid_lookup_argument": 1,
+      "wrong_lookup_or_answer": 5
+    },
+    "peak_cuda_allocated_mib": 1239.04052734375
+  },
+  "by_kind": {
+    "direct": {
+      "tasks": 34,
+      "successes": 34,
+      "success_rate": 1.0,
+      "strict_successes": 5,
+      "strict_success_rate": 0.14705882352941177,
+      "requests": 34,
+      "strict_valid_requests": 5,
+      "fence_normalized_requests": 29,
+      "descriptive_wilson_95": [
+        0.8984854458466761,
+        0.9999999999999999
+      ],
+      "mean_calls": 0.0,
+      "mean_minimum_calls": 0.0,
+      "correct_mean_calls": 0.0,
+      "correct_extra_calls": 0.0,
+      "generated_tokens": 655,
+      "generation_seconds": 46.72070150024956,
+      "generation_tokens_per_second": 14.019481278475695,
+      "mean_task_wall_seconds": 1.378448349997223,
+      "median_task_wall_seconds": 1.3895986000134144,
+      "repeated_calls": 0,
+      "invalid_tool_calls": 0,
+      "stop_reasons": {
+        "answered": 34
+      },
+      "failed_answered": 0,
+      "direct_unnecessary_lookup_tasks": 0,
+      "failure_classes": {},
+      "peak_cuda_allocated_mib": 1239.04052734375
+    },
+    "one_lookup": {
+      "tasks": 33,
+      "successes": 25,
+      "success_rate": 0.7575757575757576,
+      "strict_successes": 2,
+      "strict_success_rate": 0.06060606060606061,
+      "requests": 72,
+      "strict_valid_requests": 33,
+      "fence_normalized_requests": 37,
+      "descriptive_wilson_95": [
+        0.5897538017044264,
+        0.8716828662282499
+      ],
+      "mean_calls": 1.1818181818181819,
+      "mean_minimum_calls": 1.0,
+      "correct_mean_calls": 1.0,
+      "correct_extra_calls": 0.0,
+      "generated_tokens": 1914,
+      "generation_seconds": 134.93583960004617,
+      "generation_tokens_per_second": 14.184519143862392,
+      "mean_task_wall_seconds": 4.100348066670862,
+      "median_task_wall_seconds": 3.6508095000172034,
+      "repeated_calls": 0,
+      "invalid_tool_calls": 1,
+      "stop_reasons": {
+        "answered": 31,
+        "invalid_action": 2
+      },
+      "failed_answered": 6,
+      "direct_unnecessary_lookup_tasks": 0,
+      "failure_classes": {
+        "invalid_action": 2,
+        "invalid_lookup_argument": 1,
+        "wrong_lookup_or_answer": 5
+      },
+      "peak_cuda_allocated_mib": 1239.04052734375
+    },
+    "two_lookup": {
+      "tasks": 33,
+      "successes": 0,
+      "success_rate": 0.0,
+      "strict_successes": 0,
+      "strict_success_rate": 0.0,
+      "requests": 33,
+      "strict_valid_requests": 1,
+      "fence_normalized_requests": 32,
+      "descriptive_wilson_95": [
+        0.0,
+        0.10426999754245206
+      ],
+      "mean_calls": 0.0,
+      "mean_minimum_calls": 2.0,
+      "correct_mean_calls": null,
+      "correct_extra_calls": null,
+      "generated_tokens": 628,
+      "generation_seconds": 43.94555190030951,
+      "generation_tokens_per_second": 14.29041103920183,
+      "mean_task_wall_seconds": 1.335453545454198,
+      "median_task_wall_seconds": 1.2112270999932662,
+      "repeated_calls": 0,
+      "invalid_tool_calls": 0,
+      "stop_reasons": {
+        "answered": 33
+      },
+      "failed_answered": 33,
+      "direct_unnecessary_lookup_tasks": 0,
+      "failure_classes": {
+        "answer_without_required_lookup": 33
+      },
+      "peak_cuda_allocated_mib": 1239.04052734375
+    }
+  },
+  "manifest": {
+    "config": {
+      "model_id": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "dataset_sha256": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+      "task_count": 100,
+      "seed": 7,
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "enable_thinking": false,
+      "dtype": "bfloat16",
+      "device": "cuda:0",
+      "batch_size": 1,
+      "max_new_tokens": 64,
+      "max_context": 1024,
+      "max_turns": 4,
+      "max_calls": 3,
+      "parser": "fenced",
+      "cpu_threads": 4,
+      "system_prompt_sha256": "5eb327924044d22383f6d5baa9b3a5e15d107b42413c06d8a9bd7a6481f6a190",
+      "baseline_source_sha256": "d8db100d03c1288523f58e7e8afcdebc87d293b160c89335c4d374b9b85faca7",
+      "environment_source_sha256": "4663440d9c0b465577ba6383efe663e73dc076ede8553cb06a52290c4cddc973"
+    },
+    "started_at": "2026-10-11T12:28:12.648083+08:00",
+    "python": "3.13.5",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.57.3",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "status": "complete",
+    "source": "real-model-inference-on-synthetic-environment",
+    "training_performed": false,
+    "gpu_status_before_load": "4862, 66, 39.53, [N/A]",
+    "cuda_free_before_load_mib": 6946.0,
+    "load_seconds": 2.7473418999579735,
+    "model_parameters": 596049920,
+    "parameter_mib": 1136.875,
+    "allocated_after_load_mib": 1136.88916015625,
+    "gpu_status_after_load": "6125, 79, 40.52, [N/A]",
+    "completed_tasks": 100,
+    "inference_wall_seconds": 226.30114110000432,
+    "cuda_peak_allocated_mib": 1239.04052734375,
+    "cuda_peak_reserved_mib": 1274.0,
+    "gpu_status_end": "7063, 70, 41.41, [N/A]",
+    "process_wall_seconds": 229.19943049998255
+  },
+  "caveats": [
+    "Real CUDA model inference on synthetic English tasks; no training performed.",
+    "One sampled attempt per task; observed success is not a repeated-trial pass@k study.",
+    "Development tasks used for analysis; future final test must be independently generated.",
+    "Wilson intervals are descriptive under binomial assumptions; controlled templates are not IID real-world tasks.",
+    "PyTorch memory measures this process; nvidia-smi includes other apps and WDDM accounting.",
+    "Inference feasibility does not establish backward/optimizer or GRPO training feasibility."
+  ]
+}

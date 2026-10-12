@@ -1,0 +1,92 @@
+{
+  "prepared_at": "2026-10-11T06:52:33.716812+00:00",
+  "root": "results\\sft-v1",
+  "data_root": "data\\sft-v1",
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "dataset_sha256": {
+    "train": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "dev": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "test": "162bdc844b212fc998b46aad7f51b2b79d4ca2fd3ab2d860537eeba45fb6a9ed"
+  },
+  "data_counts": {
+    "train": 300,
+    "dev": 30,
+    "test": 60
+  },
+  "prompt_files": {
+    "neutral": "results\\sft-v1\\prompts\\neutral.txt",
+    "balanced_examples": "results\\sft-v1\\prompts\\balanced_examples.txt"
+  },
+  "prompt_sha256": {
+    "neutral": "5183380160a2b953ecbbaab9c9a319edef425a93b1fa107dffe5cd4b7afb6402",
+    "balanced_examples": "8f6aa28762db09c48d35a7a29dbeacb25de51f11f27fa279763f0a36f429dc0e"
+  },
+  "source_sha256": {
+    "baseline.py": "d8db100d03c1288523f58e7e8afcdebc87d293b160c89335c4d374b9b85faca7",
+    "environment.py": "4663440d9c0b465577ba6383efe663e73dc076ede8553cb06a52290c4cddc973",
+    "sft_data.py": "d4f057198514c300436609fa23930c662d01aeffe7fb8f8545bd111691bef9ad",
+    "sft_train.py": "3f2eb63e0a97ba11c597c156ab6d4245788fddcd1a38c0f3d6a231f320c461d3",
+    "sft_eval.py": "df92b375c46cec45ca0b6dba85f0b2eccc92a50b7ebfca1fb2c7720df44d6d4a",
+    "sft_experiment.py": "8eb545f40966db4c443ac712cb4d7d9b8ea092e47b7e75cda74f67b34682d905",
+    "verify_run.py": "0862ab1d687d36d938e3982f858024de0d4d86e4e84cd4b09a83c184fc3ee1b2"
+  },
+  "training": {
+    "seed": 42,
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "micro_batch": 1,
+    "gradient_accumulation": 8,
+    "epochs": 1,
+    "max_context": 768,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "dtype": "BF16 backbone, FP32 LoRA parameters",
+    "loss": "mean assistant-token loss per request, averaged over accumulation group"
+  },
+  "memory_test": {
+    "optimizer_steps": 8,
+    "microbatches": 64,
+    "selection": "eight longest train decision contexts, repeated eight times",
+    "fresh_model_for_full_training": true,
+    "fallback": "retry with non-reentrant gradient checkpointing only on CUDA OOM"
+  },
+  "evaluation_seeds": {
+    "dev": [
+      7
+    ],
+    "test": [
+      7,
+      10007,
+      20007
+    ]
+  },
+  "eval_conditions": [
+    "base/neutral",
+    "base/balanced_examples",
+    "sft/neutral",
+    "sft/balanced_examples"
+  ],
+  "eval_fixed": {
+    "parser": "fenced",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "max_context": 1024,
+    "max_new_tokens": 64,
+    "max_turns": 4,
+    "max_calls": 3,
+    "thinking": false,
+    "batch_size": 1
+  },
+  "checkpoint_selection": "fixed final one-epoch checkpoint; no hyperparameter or checkpoint selection using test",
+  "test_gate": "all base and SFT test generation happens only after the final adapter has been saved and hashed",
+  "limitation": "One training seed; three evaluation seeds share 60 held-out-template tasks. Controlled synthetic English schema only."
+}

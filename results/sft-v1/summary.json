@@ -1,0 +1,3265 @@
+{
+  "plan_sha256": "af1ba9aa79370d02bdccf2163161f8ada729197a5b1f3a2d3a387115edcc901c",
+  "report_source_sha256": "6ee87d599c3c6b21339b372189db3f7514d697a1563dd538ddfe3f12e85c068d",
+  "generated_at": "2026-10-11T15:27:34.458382+08:00",
+  "training": {
+    "status": "complete",
+    "mode": "train",
+    "started_at": "2026-10-11T06:56:14.907160+00:00",
+    "plan_sha256": "af1ba9aa79370d02bdccf2163161f8ada729197a5b1f3a2d3a387115edcc901c",
+    "config": {
+      "seed": 42,
+      "rank": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "learning_rate": 0.0001,
+      "micro_batch": 1,
+      "gradient_accumulation": 8,
+      "epochs": 1,
+      "max_context": 768,
+      "optimizer": "AdamW",
+      "weight_decay": 0.0,
+      "gradient_clip": 1.0,
+      "dtype": "BF16 backbone, FP32 LoRA parameters",
+      "loss": "mean assistant-token loss per request, averaged over accumulation group"
+    },
+    "gradient_checkpointing": false,
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "train_sha256": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "dev_sha256": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "python": "3.13.5",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.57.3",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cuda": "12.8",
+    "source_sha256": "3f2eb63e0a97ba11c597c156ab6d4245788fddcd1a38c0f3d6a231f320c461d3",
+    "training_performed": true,
+    "supervision_sha256": "7c8d839de085add2eb08fcfd44d120866fb84927deda0d75ba1f270a7dac5cb9",
+    "training_tasks": 300,
+    "decision_targets": 600,
+    "max_sequence_tokens": 406,
+    "supervised_tokens": 11835,
+    "second_lookup_states": 100,
+    "trainable_parameters": 1146880,
+    "total_parameters": 597196800,
+    "initial_adapter_sha256": "7756ae5f9593b5efba83c47273aaf9978af94d2f2fc4e1e9a1a587bb1e2d9bc2",
+    "parameter_dtypes": {
+      "torch.bfloat16": 596049920,
+      "torch.float32": 1146880
+    },
+    "dev_loss_before": 0.42671523056924343,
+    "distinct_tasks_used": 300,
+    "distinct_decision_targets_used": 600,
+    "optimizer_steps": 75,
+    "microbatches_seen": 600,
+    "microbatches": 600,
+    "adapter_changed": true,
+    "final_adapter_state_sha256": "ac8446010ceaacbbdb9b4ef0eb7f3f448018c617815d2c3e94dbfd9ca13a976f",
+    "optimization_wall_seconds": 102.57807819999289,
+    "cuda_peak_allocated_mib": 2948.85693359375,
+    "cuda_peak_reserved_mib": 4956.0,
+    "frozen_base_gradients_absent": true,
+    "dev_loss_after": 8.489877823194547e-05,
+    "adapter_files_sha256": {
+      "adapter_config.json": "b19230764b7a1cd3441ff0521b2f2cc797c6abfccfaa7b7962482a3e16f21d17",
+      "adapter_model.safetensors": "d6e235d92f81787835abaff4f604a28ce11a5753d5b850f6e48a12b64be381a3",
+      "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+    },
+    "checkpoint_selection": "fixed final checkpoint after one epoch; no test-based selection",
+    "process_wall_seconds": 113.76610690000234
+  },
+  "smoke": {
+    "status": "complete",
+    "mode": "smoke",
+    "started_at": "2026-10-11T06:55:50.446600+00:00",
+    "plan_sha256": "af1ba9aa79370d02bdccf2163161f8ada729197a5b1f3a2d3a387115edcc901c",
+    "config": {
+      "seed": 42,
+      "rank": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "learning_rate": 0.0001,
+      "micro_batch": 1,
+      "gradient_accumulation": 8,
+      "epochs": 1,
+      "max_context": 768,
+      "optimizer": "AdamW",
+      "weight_decay": 0.0,
+      "gradient_clip": 1.0,
+      "dtype": "BF16 backbone, FP32 LoRA parameters",
+      "loss": "mean assistant-token loss per request, averaged over accumulation group"
+    },
+    "gradient_checkpointing": false,
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "train_sha256": "10ab5429fcd6dfbc217817959765e4ea2f8316c4491fd38752473fca0051326a",
+    "dev_sha256": "a9b32e296a26fe6193916f021e04f73de794d5311220ce6e306e50df6fd2ddea",
+    "python": "3.13.5",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.57.3",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cuda": "12.8",
+    "source_sha256": "3f2eb63e0a97ba11c597c156ab6d4245788fddcd1a38c0f3d6a231f320c461d3",
+    "training_performed": true,
+    "supervision_sha256": "7c8d839de085add2eb08fcfd44d120866fb84927deda0d75ba1f270a7dac5cb9",
+    "training_tasks": 300,
+    "decision_targets": 600,
+    "max_sequence_tokens": 406,
+    "supervised_tokens": 11835,
+    "second_lookup_states": 100,
+    "trainable_parameters": 1146880,
+    "total_parameters": 597196800,
+    "initial_adapter_sha256": "7756ae5f9593b5efba83c47273aaf9978af94d2f2fc4e1e9a1a587bb1e2d9bc2",
+    "parameter_dtypes": {
+      "torch.float32": 1146880,
+      "torch.bfloat16": 596049920
+    },
+    "distinct_tasks_used": 8,
+    "distinct_decision_targets_used": 8,
+    "optimizer_steps": 8,
+    "microbatches_seen": 64,
+    "microbatches": 64,
+    "adapter_changed": true,
+    "final_adapter_state_sha256": "c8fd23cf0f2b89734ce7ea3843f436a74db67a96bb33f01c19f8ec2493eb8708",
+    "optimization_wall_seconds": 13.36203709995607,
+    "cuda_peak_allocated_mib": 2960.7978515625,
+    "cuda_peak_reserved_mib": 3108.0,
+    "frozen_base_gradients_absent": true,
+    "process_wall_seconds": 15.607151600008365
+  },
+  "training_audit": {
+    "training_manifest_sha256": "31e6ef528276cb4754bfe17900416fec340ef269950082cf10904a0939f7d436",
+    "training_steps_sha256": "05d6d69ec1b3a43cf828288a82ab8bdf2a1082701cca8c65deffd340508f8807",
+    "supervision_sha256": "7c8d839de085add2eb08fcfd44d120866fb84927deda0d75ba1f270a7dac5cb9",
+    "adapter_files_sha256": {
+      "adapter_config.json": "b19230764b7a1cd3441ff0521b2f2cc797c6abfccfaa7b7962482a3e16f21d17",
+      "adapter_model.safetensors": "d6e235d92f81787835abaff4f604a28ce11a5753d5b850f6e48a12b64be381a3",
+      "README.md": "62786c1fa4a87732c2ec71f0753588d455e8d10700d920e5e5d21d2070d570bb"
+    },
+    "rebuilt_masked_requests": 600,
+    "unique_training_episodes": 300,
+    "optimizer_steps": 75,
+    "second_lookup_states": 100,
+    "split_overlap_absent": true,
+    "all_training_targets_seen_once": true,
+    "training_and_smoke_same_initial_adapter": true,
+    "training_did_not_reuse_smoke_adapter": true,
+    "saved_adapter_state_hash_matches": true,
+    "saved_adapter_parameters": 1146880,
+    "saved_adapter_dtype": "float32",
+    "only_lora_tensors_saved": true,
+    "limitation": "Base tensors were frozen and excluded from optimizer; replay verifies recorded token/tool provenance, not a rerun of model generation."
+  },
+  "conditions": [
+    {
+      "split": "dev",
+      "model": "base",
+      "prompt": "neutral",
+      "seed": 7,
+      "metrics": {
+        "episodes": 30,
+        "successes": 18,
+        "strict_successes": 4,
+        "requests": 39,
+        "strict_valid_requests": 13,
+        "strict_valid_request_rate": 0.3333333333333333,
+        "correct_first_lookup": 9,
+        "private_episodes": 20,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 29,
+          "invalid_action": 1
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 2
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 8,
+            "strict_successes": 2
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 2
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 2
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 0
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 0.4444444444444444,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 305,
+        "generation_seconds": 38.349200799828395,
+        "generated_tokens": 849,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 8,
+            "all_attempts_wrong": 2,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 18,
+            "all_attempts_wrong": 12,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 11,
+          "invalid_action": 1
+        }
+      },
+      "episodes_sha256": "93f0b906ede44674eaeae6d11f7f7e0525768846335547b683b8540fa57cd9bc",
+      "verification_sha256": "d11d877bf6c968fc8bc0d522d8ad09c6c7e62be228d1754b9db776ae698d2253",
+      "peak_allocated_mib": 1208.822265625
+    },
+    {
+      "split": "dev",
+      "model": "base",
+      "prompt": "balanced_examples",
+      "seed": 7,
+      "metrics": {
+        "episodes": 30,
+        "successes": 20,
+        "strict_successes": 20,
+        "requests": 47,
+        "strict_valid_requests": 47,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 17,
+        "private_episodes": 20,
+        "two_lookup_started": 7,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 0
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 0.5,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 7,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 5,
+        "two_answered_owner_id": 5,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 647,
+        "generation_seconds": 39.280114799854346,
+        "generated_tokens": 874,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 10
+        }
+      },
+      "episodes_sha256": "d0b6357a36847accf3820c7c7d879021ecb2e22294d02cfa35b46e2b1290cbe9",
+      "verification_sha256": "7f5291c8a2b594da51d02bea9864d1662d158ffa0c7919c0320e33dfb4026e3c",
+      "peak_allocated_mib": 1310.189453125
+    },
+    {
+      "split": "dev",
+      "model": "sft",
+      "prompt": "neutral",
+      "seed": 7,
+      "metrics": {
+        "episodes": 30,
+        "successes": 30,
+        "strict_successes": 30,
+        "requests": 60,
+        "strict_valid_requests": 60,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 20,
+        "private_episodes": 20,
+        "two_lookup_started": 10,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 10,
+        "two_correct_chain_prefix": 10,
+        "two_second_lookup_to_actual_owner": 10,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 384,
+        "generation_seconds": 65.90756199962925,
+        "generated_tokens": 1168,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 30,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "episodes_sha256": "80fd39a5afd78016fc4ca507938bd2b1a5027153b96e174e0e69818d5923e4e3",
+      "verification_sha256": "e4a6e2454e7078907614cfc0007538e8a8e63942c6c3972d8e59664620baee97",
+      "peak_allocated_mib": 1233.287109375
+    },
+    {
+      "split": "dev",
+      "model": "sft",
+      "prompt": "balanced_examples",
+      "seed": 7,
+      "metrics": {
+        "episodes": 30,
+        "successes": 30,
+        "strict_successes": 30,
+        "requests": 60,
+        "strict_valid_requests": 60,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 20,
+        "private_episodes": 20,
+        "two_lookup_started": 10,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 10,
+        "two_correct_chain_prefix": 10,
+        "two_second_lookup_to_actual_owner": 10,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 722,
+        "generation_seconds": 65.52157360018464,
+        "generated_tokens": 1168,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 30,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "episodes_sha256": "aa8aae3a12e1728f25db63cae61d6cd06fd50dc00c7f9a6447625634b022452a",
+      "verification_sha256": "1c4c9e7f82cc200fa0dabc18d4f600bafbf9f22920787548c1ade88cc7afcf49",
+      "peak_allocated_mib": 1339.80615234375
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "neutral",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 29,
+        "strict_successes": 8,
+        "requests": 69,
+        "strict_valid_requests": 22,
+        "strict_valid_request_rate": 0.3188405797101449,
+        "correct_first_lookup": 9,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 5
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 9,
+            "strict_successes": 3
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.3103448275862069,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 308,
+        "generation_seconds": 70.52650970011018,
+        "generated_tokens": 1597,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 9,
+            "all_attempts_wrong": 11,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 29,
+            "all_attempts_wrong": 31,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 31
+        }
+      },
+      "episodes_sha256": "8181e74a15a041f96c282982846fd9490e9f612cb24a7eb36f3493b366de5a05",
+      "verification_sha256": "0bcfb7c60df6ac2ecdc9177259cf52cd36981bbb4be68252ddcc80bc9c5e815e",
+      "peak_allocated_mib": 1209.49365234375
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "neutral",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 28,
+        "strict_successes": 12,
+        "requests": 68,
+        "strict_valid_requests": 26,
+        "strict_valid_request_rate": 0.38235294117647056,
+        "correct_first_lookup": 8,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 8
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 8,
+            "strict_successes": 4
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 1
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.2857142857142857,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 308,
+        "generation_seconds": 68.9247449998511,
+        "generated_tokens": 1586,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 8,
+            "all_attempts_wrong": 12,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 28,
+            "all_attempts_wrong": 32,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 32
+        }
+      },
+      "episodes_sha256": "d93d740ade694957813ddd8865e81f6bae9b4ef2c3a5e72faf6477b4255292d2",
+      "verification_sha256": "1f3e24ebf704fc4ebf629bca0f5cb7667cc1b2fbd1de6a2e8a140df2953f4243",
+      "peak_allocated_mib": 1209.49365234375
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "neutral",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 28,
+        "strict_successes": 9,
+        "requests": 68,
+        "strict_valid_requests": 25,
+        "strict_valid_request_rate": 0.36764705882352944,
+        "correct_first_lookup": 8,
+        "private_episodes": 40,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 6
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 8,
+            "strict_successes": 3
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 1
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.2857142857142857,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 308,
+        "generation_seconds": 69.62096259987447,
+        "generated_tokens": 1564,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 8,
+            "all_attempts_wrong": 12,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 28,
+            "all_attempts_wrong": 32,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 32
+        }
+      },
+      "episodes_sha256": "3684959d52e0ea4553815c22ade1cc3da80ce7f4aeb8cba88cf16e8edd245620",
+      "verification_sha256": "aa792473e2873a987530d50ec7cef0c799eb93bb1c8a7f97f382ea15f4e2422c",
+      "peak_allocated_mib": 1209.49365234375
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "balanced_examples",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 27,
+        "strict_successes": 27,
+        "requests": 80,
+        "strict_valid_requests": 79,
+        "strict_valid_request_rate": 0.9875,
+        "correct_first_lookup": 20,
+        "private_episodes": 40,
+        "two_lookup_started": 13,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 59,
+          "invalid_action": 1
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 7,
+            "strict_successes": 7
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.25925925925925924,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 13,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 11,
+        "two_answered_owner_id": 4,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 653,
+        "generation_seconds": 68.19908160029445,
+        "generated_tokens": 1412,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 7,
+            "all_attempts_wrong": 13,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 27,
+            "all_attempts_wrong": 33,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 32,
+          "invalid_action": 1
+        }
+      },
+      "episodes_sha256": "5c8a9e8cb07bd660aefbd5f49cdeeebcf6650796907ba99471b566c5538d6c82",
+      "verification_sha256": "81b76c0882b995f2ffb70be6d81589335c9c9227e85aadb1eea309c1f4a67564",
+      "peak_allocated_mib": 1314.5322265625
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "balanced_examples",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 27,
+        "strict_successes": 27,
+        "requests": 75,
+        "strict_valid_requests": 73,
+        "strict_valid_request_rate": 0.9733333333333334,
+        "correct_first_lookup": 15,
+        "private_episodes": 40,
+        "two_lookup_started": 8,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 58,
+          "invalid_action": 2
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 7,
+            "strict_successes": 7
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.25925925925925924,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 8,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 14,
+        "two_answered_owner_id": 5,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 653,
+        "generation_seconds": 61.72318079974502,
+        "generated_tokens": 1296,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 7,
+            "all_attempts_wrong": 13,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 27,
+            "all_attempts_wrong": 33,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 31,
+          "invalid_action": 2
+        }
+      },
+      "episodes_sha256": "e6c8af7e33eadb5b65d17f8a2b3df5e92c655ca4eb28de2efe5af2f8ef0c643b",
+      "verification_sha256": "be7ce3f83477718f66503ef2a1de344220919681223f8f941f99e5344fa79a9d",
+      "peak_allocated_mib": 1314.5322265625
+    },
+    {
+      "split": "test",
+      "model": "base",
+      "prompt": "balanced_examples",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 28,
+        "strict_successes": 28,
+        "requests": 79,
+        "strict_valid_requests": 77,
+        "strict_valid_request_rate": 0.9746835443037974,
+        "correct_first_lookup": 19,
+        "private_episodes": 40,
+        "two_lookup_started": 11,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 58,
+          "invalid_action": 2
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 8,
+            "strict_successes": 8
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 1
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.2857142857142857,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 11,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 13,
+        "two_answered_owner_id": 5,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 652,
+        "generation_seconds": 56.92280549975112,
+        "generated_tokens": 1401,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 8,
+            "all_attempts_wrong": 12,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 28,
+            "all_attempts_wrong": 32,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 30,
+          "invalid_action": 2
+        }
+      },
+      "episodes_sha256": "1ff0499d53bda713bea9443d82ff3e7158037c94de7311c62a0c72bed279c701",
+      "verification_sha256": "7d7974724e41582c4001a757c31ef7441bd5aa7ea027a13900c343d9f280a784",
+      "peak_allocated_mib": 1314.46044921875
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "neutral",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 60,
+        "strict_successes": 60,
+        "requests": 120,
+        "strict_valid_requests": 120,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 40,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 390,
+        "generation_seconds": 130.4957109001698,
+        "generated_tokens": 2367,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 60,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "episodes_sha256": "932e7c80fff89343b7aa5fdcbf650b8466b6e063b62cbd453d525ec9703942a3",
+      "verification_sha256": "0a4411d347a229f7672d5016d5d3b00955385b8f1aa64c900059a8b5718ff0aa",
+      "peak_allocated_mib": 1234.71044921875
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "neutral",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 60,
+        "strict_successes": 60,
+        "requests": 120,
+        "strict_valid_requests": 120,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 40,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 390,
+        "generation_seconds": 130.2765454001492,
+        "generated_tokens": 2367,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 60,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "episodes_sha256": "ed9c0a849ccd2e532102ddd42c8219709dddceed5d4063f71d7d680fe6bccb0c",
+      "verification_sha256": "6b353d48d7ae33d825515e908543e815981ca0f5633e1e6e3ee8f3cf10ddedcb",
+      "peak_allocated_mib": 1234.71044921875
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "neutral",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 60,
+        "strict_successes": 60,
+        "requests": 120,
+        "strict_valid_requests": 120,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 40,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 390,
+        "generation_seconds": 112.05249519995414,
+        "generated_tokens": 2367,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 60,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "episodes_sha256": "63cf29afb2615ca15871acac1a69f526b17d8e24fb4d0bafd5d97d85b0fdbd2a",
+      "verification_sha256": "a5b378f07df1156fe783c613ca4e58af88a7a5a93af4dffc972e5a23a3f78ea4",
+      "peak_allocated_mib": 1234.71044921875
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "balanced_examples",
+      "seed": 7,
+      "metrics": {
+        "episodes": 60,
+        "successes": 58,
+        "strict_successes": 58,
+        "requests": 118,
+        "strict_valid_requests": 118,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 38,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 18,
+            "strict_successes": 18
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 4
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 728,
+        "generation_seconds": 134.4449520004564,
+        "generated_tokens": 2318,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 18,
+            "all_attempts_wrong": 2,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 58,
+            "all_attempts_wrong": 2,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 2
+        }
+      },
+      "episodes_sha256": "afb0a810bf7b9bd8e8c34b1767772547ba24055879efb649e10b499031142504",
+      "verification_sha256": "33420697313f7951ae6c6cbe7b1f2bc86c1278e309acfb8cfc9bd8785e05d22d",
+      "peak_allocated_mib": 1342.35791015625
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "balanced_examples",
+      "seed": 10007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 57,
+        "strict_successes": 57,
+        "requests": 117,
+        "strict_valid_requests": 117,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 37,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 17,
+            "strict_successes": 17
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 6
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 4
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 728,
+        "generation_seconds": 131.30397600028664,
+        "generated_tokens": 2301,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 17,
+            "all_attempts_wrong": 3,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 57,
+            "all_attempts_wrong": 3,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 3
+        }
+      },
+      "episodes_sha256": "db19ee2600f3c15ef75f61a8fe1ac833bbea348934d6e7d5b85c479a92963cfa",
+      "verification_sha256": "d392de09dfadbc658bc7244e22669381161b91234ae8516fde477e908bdae716",
+      "peak_allocated_mib": 1342.35791015625
+    },
+    {
+      "split": "test",
+      "model": "sft",
+      "prompt": "balanced_examples",
+      "seed": 20007,
+      "metrics": {
+        "episodes": 60,
+        "successes": 56,
+        "strict_successes": 56,
+        "requests": 116,
+        "strict_valid_requests": 116,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 36,
+        "private_episodes": 40,
+        "two_lookup_started": 20,
+        "two_lookup_attempts": 20,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 20,
+        "stops": {
+          "answered": 60
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          },
+          "one_lookup": {
+            "attempts": 20,
+            "successes": 16,
+            "strict_successes": 16
+          },
+          "two_lookup": {
+            "attempts": 20,
+            "successes": 20,
+            "strict_successes": 20
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "direct:2": {
+            "attempts": 6,
+            "successes": 6
+          },
+          "one_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "one_lookup:1": {
+            "attempts": 7,
+            "successes": 5
+          },
+          "one_lookup:2": {
+            "attempts": 6,
+            "successes": 4
+          },
+          "two_lookup:0": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:1": {
+            "attempts": 7,
+            "successes": 7
+          },
+          "two_lookup:2": {
+            "attempts": 6,
+            "successes": 6
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 20,
+        "two_correct_chain_prefix": 20,
+        "two_second_lookup_to_actual_owner": 20,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 728,
+        "generation_seconds": 113.68414180004038,
+        "generated_tokens": 2276,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 16,
+            "all_attempts_wrong": 4,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 56,
+            "all_attempts_wrong": 4,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 4
+        }
+      },
+      "episodes_sha256": "6d45b7f5f7409618dd9247423e4bb4cd3bbdfad2ca6dace4136c1f7d0cb29af5",
+      "verification_sha256": "5f40938e497b50380b7dd6ca3933e7f78bd2b0326bb459b42a1a88218cd16c05",
+      "peak_allocated_mib": 1342.35791015625
+    }
+  ],
+  "aggregate": {
+    "dev": {
+      "base/neutral": {
+        "episodes": 30,
+        "successes": 18,
+        "strict_successes": 4,
+        "requests": 39,
+        "strict_valid_requests": 13,
+        "strict_valid_request_rate": 0.3333333333333333,
+        "correct_first_lookup": 9,
+        "private_episodes": 20,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 29,
+          "invalid_action": 1
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 2
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 8,
+            "strict_successes": 2
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 2
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 2
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 0
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 0.4444444444444444,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 305,
+        "generation_seconds": 38.349200799828395,
+        "generated_tokens": 849,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 8,
+            "all_attempts_wrong": 2,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 18,
+            "all_attempts_wrong": 12,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 11,
+          "invalid_action": 1
+        }
+      },
+      "base/balanced_examples": {
+        "episodes": 30,
+        "successes": 20,
+        "strict_successes": 20,
+        "requests": 47,
+        "strict_valid_requests": 47,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 17,
+        "private_episodes": 20,
+        "two_lookup_started": 7,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 0
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 0.5,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 7,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 5,
+        "two_answered_owner_id": 5,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 647,
+        "generation_seconds": 39.280114799854346,
+        "generated_tokens": 874,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 10,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 10
+        }
+      },
+      "sft/neutral": {
+        "episodes": 30,
+        "successes": 30,
+        "strict_successes": 30,
+        "requests": 60,
+        "strict_valid_requests": 60,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 20,
+        "private_episodes": 20,
+        "two_lookup_started": 10,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 10,
+        "two_correct_chain_prefix": 10,
+        "two_second_lookup_to_actual_owner": 10,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 384,
+        "generation_seconds": 65.90756199962925,
+        "generated_tokens": 1168,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 30,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "sft/balanced_examples": {
+        "episodes": 30,
+        "successes": 30,
+        "strict_successes": 30,
+        "requests": 60,
+        "strict_valid_requests": 60,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 20,
+        "private_episodes": 20,
+        "two_lookup_started": 10,
+        "two_lookup_attempts": 10,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 10,
+        "stops": {
+          "answered": 30
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "one_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 10,
+            "successes": 10,
+            "strict_successes": 10
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "direct:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "direct:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "one_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "one_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:0": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:1": {
+            "attempts": 3,
+            "successes": 3
+          },
+          "two_lookup:2": {
+            "attempts": 2,
+            "successes": 2
+          },
+          "two_lookup:3": {
+            "attempts": 2,
+            "successes": 2
+          }
+        },
+        "unique_tasks": 30,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 10,
+        "two_correct_chain_prefix": 10,
+        "two_second_lookup_to_actual_owner": 10,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 722,
+        "generation_seconds": 65.52157360018464,
+        "generated_tokens": 1168,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 10,
+            "all_attempts_correct": 10,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 30,
+            "all_attempts_correct": 30,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      }
+    },
+    "test": {
+      "base/neutral": {
+        "episodes": 180,
+        "successes": 85,
+        "strict_successes": 29,
+        "requests": 205,
+        "strict_valid_requests": 73,
+        "strict_valid_request_rate": 0.35609756097560974,
+        "correct_first_lookup": 25,
+        "private_episodes": 120,
+        "two_lookup_started": 0,
+        "two_lookup_attempts": 60,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 60,
+        "stops": {
+          "answered": 180
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 19
+          },
+          "one_lookup": {
+            "attempts": 60,
+            "successes": 25,
+            "strict_successes": 10
+          },
+          "two_lookup": {
+            "attempts": 60,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:2": {
+            "attempts": 18,
+            "successes": 18
+          },
+          "one_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "one_lookup:1": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 18,
+            "successes": 4
+          },
+          "two_lookup:0": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 18,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.29411764705882354,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 0,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 308,
+        "generation_seconds": 209.07221729983576,
+        "generated_tokens": 4747,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 7,
+            "all_attempts_wrong": 9,
+            "mixed": 4
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 27,
+            "all_attempts_wrong": 29,
+            "mixed": 4
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 95
+        }
+      },
+      "base/balanced_examples": {
+        "episodes": 180,
+        "successes": 82,
+        "strict_successes": 82,
+        "requests": 234,
+        "strict_valid_requests": 229,
+        "strict_valid_request_rate": 0.9786324786324786,
+        "correct_first_lookup": 54,
+        "private_episodes": 120,
+        "two_lookup_started": 32,
+        "two_lookup_attempts": 60,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 60,
+        "stops": {
+          "answered": 175,
+          "invalid_action": 5
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          },
+          "one_lookup": {
+            "attempts": 60,
+            "successes": 22,
+            "strict_successes": 22
+          },
+          "two_lookup": {
+            "attempts": 60,
+            "successes": 0,
+            "strict_successes": 0
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:2": {
+            "attempts": 18,
+            "successes": 18
+          },
+          "one_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "one_lookup:1": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "one_lookup:2": {
+            "attempts": 18,
+            "successes": 1
+          },
+          "two_lookup:0": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "two_lookup:1": {
+            "attempts": 21,
+            "successes": 0
+          },
+          "two_lookup:2": {
+            "attempts": 18,
+            "successes": 0
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 0.2682926829268293,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 32,
+        "two_correct_chain_prefix": 0,
+        "two_second_lookup_to_actual_owner": 0,
+        "two_copied_example_department": 38,
+        "two_answered_owner_id": 14,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 653,
+        "generation_seconds": 186.8450678997906,
+        "generated_tokens": 4109,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 7,
+            "all_attempts_wrong": 12,
+            "mixed": 1
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 0,
+            "all_attempts_wrong": 20,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 27,
+            "all_attempts_wrong": 32,
+            "mixed": 1
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 93,
+          "invalid_action": 5
+        }
+      },
+      "sft/neutral": {
+        "episodes": 180,
+        "successes": 180,
+        "strict_successes": 180,
+        "requests": 360,
+        "strict_valid_requests": 360,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 120,
+        "private_episodes": 120,
+        "two_lookup_started": 60,
+        "two_lookup_attempts": 60,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 60,
+        "stops": {
+          "answered": 180
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          },
+          "one_lookup": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          },
+          "two_lookup": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:2": {
+            "attempts": 18,
+            "successes": 18
+          },
+          "one_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "one_lookup:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "one_lookup:2": {
+            "attempts": 18,
+            "successes": 18
+          },
+          "two_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "two_lookup:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "two_lookup:2": {
+            "attempts": 18,
+            "successes": 18
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 60,
+        "two_correct_chain_prefix": 60,
+        "two_second_lookup_to_actual_owner": 60,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 390,
+        "generation_seconds": 372.8247515002731,
+        "generated_tokens": 7101,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 60,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          }
+        },
+        "failure_classes": {}
+      },
+      "sft/balanced_examples": {
+        "episodes": 180,
+        "successes": 171,
+        "strict_successes": 171,
+        "requests": 351,
+        "strict_valid_requests": 351,
+        "strict_valid_request_rate": 1.0,
+        "correct_first_lookup": 111,
+        "private_episodes": 120,
+        "two_lookup_started": 60,
+        "two_lookup_attempts": 60,
+        "budget_first_lookup_owner": 0,
+        "one_lookup_attempts": 60,
+        "stops": {
+          "answered": 180
+        },
+        "by_kind": {
+          "direct": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          },
+          "one_lookup": {
+            "attempts": 60,
+            "successes": 51,
+            "strict_successes": 51
+          },
+          "two_lookup": {
+            "attempts": 60,
+            "successes": 60,
+            "strict_successes": 60
+          }
+        },
+        "by_template": {
+          "direct:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "direct:2": {
+            "attempts": 18,
+            "successes": 18
+          },
+          "one_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "one_lookup:1": {
+            "attempts": 21,
+            "successes": 18
+          },
+          "one_lookup:2": {
+            "attempts": 18,
+            "successes": 12
+          },
+          "two_lookup:0": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "two_lookup:1": {
+            "attempts": 21,
+            "successes": 21
+          },
+          "two_lookup:2": {
+            "attempts": 18,
+            "successes": 18
+          }
+        },
+        "unique_tasks": 60,
+        "correct_mean_calls": 1,
+        "correct_extra_calls": 0,
+        "two_correct_first_lookup": 60,
+        "two_correct_chain_prefix": 60,
+        "two_second_lookup_to_actual_owner": 60,
+        "two_copied_example_department": 0,
+        "two_answered_owner_id": 0,
+        "invalid_tool_calls": 0,
+        "repeated_calls": 0,
+        "output_truncations": 0,
+        "context_failures": 0,
+        "max_input_tokens": 728,
+        "generation_seconds": 379.4330698007834,
+        "generated_tokens": 6895,
+        "task_stability": {
+          "direct": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "one_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 16,
+            "all_attempts_wrong": 2,
+            "mixed": 2
+          },
+          "two_lookup": {
+            "unique_tasks": 20,
+            "all_attempts_correct": 20,
+            "all_attempts_wrong": 0,
+            "mixed": 0
+          },
+          "all": {
+            "unique_tasks": 60,
+            "all_attempts_correct": 56,
+            "all_attempts_wrong": 2,
+            "mixed": 2
+          }
+        },
+        "failure_classes": {
+          "answer_before_required_lookups": 9
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "dev": {
+      "base/balanced_examples -> sft/neutral": {
+        "paired_attempts": 30,
+        "both_correct": 20,
+        "gained": 10,
+        "lost": 0,
+        "both_wrong": 0
+      },
+      "base/neutral -> sft/neutral": {
+        "paired_attempts": 30,
+        "both_correct": 18,
+        "gained": 12,
+        "lost": 0,
+        "both_wrong": 0
+      },
+      "base/balanced_examples -> sft/balanced_examples": {
+        "paired_attempts": 30,
+        "both_correct": 20,
+        "gained": 10,
+        "lost": 0,
+        "both_wrong": 0
+      },
+      "sft/neutral -> sft/balanced_examples": {
+        "paired_attempts": 30,
+        "both_correct": 30,
+        "gained": 0,
+        "lost": 0,
+        "both_wrong": 0
+      }
+    },
+    "test": {
+      "base/balanced_examples -> sft/neutral": {
+        "paired_attempts": 180,
+        "both_correct": 82,
+        "gained": 98,
+        "lost": 0,
+        "both_wrong": 0
+      },
+      "base/neutral -> sft/neutral": {
+        "paired_attempts": 180,
+        "both_correct": 85,
+        "gained": 95,
+        "lost": 0,
+        "both_wrong": 0
+      },
+      "base/balanced_examples -> sft/balanced_examples": {
+        "paired_attempts": 180,
+        "both_correct": 82,
+        "gained": 89,
+        "lost": 0,
+        "both_wrong": 9
+      },
+      "sft/neutral -> sft/balanced_examples": {
+        "paired_attempts": 180,
+        "both_correct": 171,
+        "gained": 0,
+        "lost": 9,
+        "both_wrong": 0
+      }
+    }
+  },
+  "total_verified_episodes": 840,
+  "total_verified_requests": 1356,
+  "caveats": [
+    "60 unique test tasks per condition, each repeated under three sampling seeds; 180 attempts are correlated.",
+    "Held-out paraphrases and entities, same English tool schema and two-hop composition; not a real-world agent benchmark.",
+    "One LoRA training seed and one fixed final checkpoint; no test-selected hyperparameters.",
+    "CUDA allocation/reservation are process metrics; desktop GPU usage is additional.",
+    "Generic per-condition analyzer caveats describe the legacy inference engine; this report records real LoRA training separately."
+  ]
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "file": "data/calibration9.jsonl",
+    "before": {
+      "seed": 707,
+      "task_count": 9,
+      "sha256": "f231a309cf29f7bf98397457d7a93b343efb10f29f0342740a21a8183d9b366f",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 9
+    },
+    "after": {
+      "seed": 707,
+      "task_count": 9,
+      "sha256": "28f9fef3b94e667746fdcc99bcdf54c48c62781968eef79d58f93cef76ea955c",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 9,
+      "normalized_lf_sha256": "f231a309cf29f7bf98397457d7a93b343efb10f29f0342740a21a8183d9b366f",
+      "hash_correction": "Corrected Windows newline byte accounting after inference; JSONL bytes unchanged."
+    },
+    "data_bytes_unchanged": true
+  },
+  {
+    "file": "data/dev100.jsonl",
+    "before": {
+      "seed": 20261011,
+      "task_count": 100,
+      "sha256": "ad873d19dc3c5db991bbc3b0bfe314dc4d80c5ea69bf08fa6893c7588f302678",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 100
+    },
+    "after": {
+      "seed": 20261011,
+      "task_count": 100,
+      "sha256": "7ee7e4ae3ddf1f723c616986db30fb76149ab602cadc41076ba2741794d50657",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 100,
+      "normalized_lf_sha256": "ad873d19dc3c5db991bbc3b0bfe314dc4d80c5ea69bf08fa6893c7588f302678",
+      "hash_correction": "Corrected Windows newline byte accounting after inference; JSONL bytes unchanged."
+    },
+    "data_bytes_unchanged": true
+  },
+  {
+    "file": "data/prompt_control60.jsonl",
+    "before": {
+      "seed": 884201,
+      "task_count": 60,
+      "sha256": "ad439fceb0dddf4623c12cf366285290eebbc5dd86eea5bacabb6a5e760b2ed0",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 60
+    },
+    "after": {
+      "seed": 884201,
+      "task_count": 60,
+      "sha256": "09620440c4311e40d9d0fde95f5471cac1d702fda7e9342decddb09418e438d0",
+      "purpose": "development baseline; used to decide subsequent training",
+      "language": "English",
+      "model_visible_fields": [
+        "prompt"
+      ],
+      "hidden_fields": [
+        "database",
+        "expected",
+        "oracle_calls",
+        "kind"
+      ],
+      "limitation": "Controlled synthetic English tasks; no evidence about broad real-world agent ability.",
+      "oracle_success": 60,
+      "normalized_lf_sha256": "ad439fceb0dddf4623c12cf366285290eebbc5dd86eea5bacabb6a5e760b2ed0",
+      "hash_correction": "Corrected Windows newline byte accounting after inference; JSONL bytes unchanged."
+    },
+    "data_bytes_unchanged": true
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-12T06:30:18.606313+00:00",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "outcome": "passed",
+    "tests_run": 48,
+    "observed_runtime_seconds": 0.673,
+    "source_sha256": {
+      "tests/test_analysis.py": "bc6ceada6cc032013c10b9cd24d43ea51f8bd8fe024b940e89bed9fb716f401c",
+      "tests/test_environment.py": "ab843ed6e3e0cb021a91bb8545ecbaef93737f689892e914ca432c1e40e01d56",
+      "tests/test_prompt_study.py": "29fe69235f13d6085f06d500f1b35710956ed9c02af52e3349d84770c35ca09a",
+      "tests/test_sft2.py": "53abdc1bb5a778e3425056eaa77fc7fef7e2161c6f52a70649d3fe5ec3316f06",
+      "tests/test_sft3.py": "13ddd82a88e693a51467d7d7febd9242c77991bc14db9c6b7187bfcc29c3d36f",
+      "tests/test_sft4.py": "0a37f031b0c98ff2d680fc26674d8befc6042c23cad705326eb1e670f494bb0c",
+      "tests/test_sft_data.py": "e240afef434310a24682ff8ca0a9286fda67c6b9f9b8d63a023d773860edfd70",
+      "tests/test_stress.py": "e8920067ce9405efea1e4f526614c10780238d4cafbe9219910ab2107cc1157d"
+    },
+    "note": "Records the already completed publication unit-test invocation; no model experiment rerun."
+  },
+  "frozen_provenance_validation": {
+    "sft_v2": "passed",
+    "sft_v3": "passed",
+    "sft_v4": "passed",
+    "conditional_copy_probe": "passed"
+  },
+  "no_new_model_requests": true,
+  "no_new_training": true
+}
